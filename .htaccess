@@ -1,0 +1,16 @@
+# http://meta.wikimedia.org/wiki/Using_a_very_short_URL
+
+RewriteEngine on
+
+# test if rewrite should stop for special directories or PHP scripts
+RewriteRule ^(images|skins|fckeditor)/ - [L]
+#RewriteRule \.php$ - [L]
+
+# uncomment this rule if you want Apache to redirect from www.mysite.com/ to
+#  www.mysite.com/wain_Page
+# RewriteRuin_Page [R]
+#RewriteRule ^$ /wiki [R,L]
+
+# do the rewrite
+#RewriteRule ^wiki/?(.*)$ /index.php?title=$1 [L,QSA]
+RewriteRule ^/*([^./]*)$ /wiki/index.php?title=$1 [L,QSA]
