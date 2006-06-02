@@ -38,8 +38,8 @@ $wgUploadDirectory  = "$IP/images";
 $wgEnableEmail = true;
 $wgEnableUserEmail  = true;
 
-$wgEmergencyContact = "brons_ozwikiadmin@rinspin.com";
-$wgPasswordSender   = "brons_ozpwsend@rinspin.com";
+$wgEmergencyContact = "openzaurus-wikiadmin@rinspin.com";
+$wgPasswordSender   = "openzaurus-password@rinspin.com";
 
 ## For a detailed description of the following switches see
 ## http://meta.wikimedia.org/Enotif and http://meta.wikimedia.org/Eauthent
@@ -111,6 +111,7 @@ $wgDiff3 = "";
 
 # $wgCacheEpoch = '20060413190000';
 require("extensions/TimestampNow.php");
+require("extensions/Email.php");
 
 
 # --- spam protection ---
