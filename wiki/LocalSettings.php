@@ -30,7 +30,7 @@ $wgArticlePath      = "/$1";
 
 $wgStylePath        = "$wgScriptPath/skins";
 $wgStyleDirectory   = "$IP/skins";
-#$wgLogo             = "$wgStylePath/common/images/wiki.png";
+$wgLogo             = "$wgScriptPath/zaurus-wglogo.gif";
 
 $wgUploadPath       = "$wgScriptPath/images";
 $wgUploadDirectory  = "$IP/images";
