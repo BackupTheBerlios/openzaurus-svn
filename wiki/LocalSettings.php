@@ -50,17 +50,7 @@ $wgEnotifUserTalk = true; # UPO
 $wgEnotifWatchlist = true; # UPO
 $wgEmailAuthentication = true;
 
-$wgDBserver         = "db.berlios.de";
-$wgDBname           = "openzaurus";
-$wgDBuser           = "openzaurus";
-$wgDBpassword       = "bogosity";
-$wgDBprefix         = "mw_";
-
-# If you're on MySQL 3.x, this next line must be FALSE:
-$wgDBmysql4 = false;
-
-# Experimental charset support for MySQL 4.1/5.0.
-$wgDBmysql5 = false;
+require_once("LocalDB.php");
 
 ## Shared memory settings
 $wgMainCacheType = CACHE_NONE;
