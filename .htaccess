@@ -6,7 +6,7 @@ RewriteEngine on
 # (er, shouldn't this be wiki/images, wiki/skins, etc?)
 RewriteRule ^(images|skins|fckeditor)/ - [L]
 
-RewriteRule ^/*([^./]*)$ /wiki/index.php?title=$1 [L,QSA]
+RewriteRule ^/*([^.]*)$ /wiki/index.php?title=$1 [L,QSA]
 
 # Ensure user can't access Subversion directories.
 RewriteRule ^/*(.*)\.svn /$1 [L,R=permanent]
