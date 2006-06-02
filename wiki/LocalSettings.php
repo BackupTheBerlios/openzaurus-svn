@@ -53,7 +53,7 @@ $wgEmailAuthentication = true;
 $wgDBserver         = "db.berlios.de";
 $wgDBname           = "openzaurus";
 $wgDBuser           = "openzaurus";
-$wgDBpassword       = "4A9BrkT3Q4";
+$wgDBpassword       = "bogosity";
 $wgDBprefix         = "mw_";
 
 # If you're on MySQL 3.x, this next line must be FALSE:
