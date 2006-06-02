@@ -12,7 +12,7 @@ function TimestampNowExtension()
     $wgParser->setHook("TimestampNow", "RenderTimestampNow");
 }
 
-function renderTimestampNow($input, $argv, $parser=null)
+function RenderTimestampNow($input, $argv, $parser=null)
 {
     # $argv is an array containing any arguments passed to the
     # extension like <example argument="foo" bar>..
