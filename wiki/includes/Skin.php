@@ -869,7 +869,8 @@ END;
 	function getPoweredBy() {
 		global $wgStylePath;
 		$url = htmlspecialchars( "$wgStylePath/common/images/poweredby_mediawiki_88x31.png" );
-		$img = '<a href="http://www.mediawiki.org/"><img src="'.$url.'" alt="MediaWiki" /></a>';
+		$berlios = '<a href="http://developer.berlios.de"><img src="http://developer.berlios.de/bslogo.php?group_id=6445" width="124" height="32" border="0" alt="BerliOS Logo" /></a>';
+		$img = '<a href="http://www.mediawiki.org/"><img src="'.$url.'" alt="MediaWiki" /></a> &nbsp; '. $berlios;
 		return $img;
 	}
 
