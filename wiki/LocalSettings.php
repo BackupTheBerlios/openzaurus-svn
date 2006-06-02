@@ -124,4 +124,6 @@ require("extensions/Email.php");
 # No need to show discussion pages for anonymous users.
 $wgShowIPinHeader = false;
 
+# Get rid of all skins except for MonoBook -- too much to support otherwise.
+$wgSkipSkins = array(simple, chick, cologneblue, myskin, standard /* called Classic */, nostalgia);
 ?>
