@@ -112,4 +112,15 @@ $wgDiff3 = "";
 # $wgCacheEpoch = '20060413190000';
 require("extensions/TimestampNow.php");
 
+
+# --- spam protection ---
+# Disables account creation by anonymous visitors
+#$wgGroupPermissions['*']['createaccount'] = false;
+# Requires users to log in to edit pages
+# $wgGroupPermissions['*']['edit'] = false;
+
+
+# No need to show discussion pages for anonymous users.
+$wgShowIPinHeader = false;
+
 ?>
