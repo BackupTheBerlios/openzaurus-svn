@@ -6,4 +6,4 @@
 # some meaningless and volatile cache data.
 
 mysqldump --add-drop-table -h db.berlios.de -u openzaurus --password=$PASSWORD openzaurus | \
-  egrep -v "^INSERT INTO mw_(user.*|site_stats|hitcounter|watchlist|objectcache|transcache) "
+  egrep -v "^INSERT INTO mw_(user.*|site_stats|hitcounter|watchlist|recentchanges|objectcache|transcache) "
