@@ -4,7 +4,7 @@
 # If you make manual changes, please keep track in case you need to
 # recreate them later.
 
-$IP = "/home/groups/openzaurus/htdocs/wiki";
+require_once("SitePath.php");
 ini_set( "include_path", ".:$IP:$IP/includes:$IP/languages" );
 require_once( "includes/DefaultSettings.php" );
 

@@ -1,0 +1,10 @@
+<?php
+
+# Copy this file to a file named SitePath.php and customize it for your site.
+# Also be sure to edit SiteSettings.php
+# Configuration items in this file get overridden by all other config files.
+
+# The full path to your htdocs/wiki directory
+$IP = "/full/path/to/htdocs/wiki";
+
+?>

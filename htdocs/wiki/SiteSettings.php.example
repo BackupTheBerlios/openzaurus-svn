@@ -1,8 +1,9 @@
 <?php
 
-# This file customizes this installation to run at your particular site.
-# Modify each line as needed.  This file overrides both LocalSettings.php
-# and includes/DefaultSettings.php.
+# Copy this file to one named SiteSettings.php and customize it.
+# Configuration items in this file override all others (in particular,
+# those in LocalSettings.php and includes/DefaultSettings.php).
+# Also be sure to edit SitePath.php.
 
 $wgDBserver         = "db.example.com";
 $wgDBname           = "db_name";
