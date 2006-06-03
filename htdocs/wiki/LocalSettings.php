@@ -25,7 +25,6 @@ $wgSitename         = "OpenZaurus";
 $wgScriptPath	    = "/wiki";
 $wgScript           = "$wgScriptPath/index.php";
 $wgRedirectScript   = "$wgScriptPath/redirect.php";
-#$wgArticlePath      = "/wiki/index.php?title=$1";
 $wgArticlePath      = "/$1";
 
 $wgStylePath        = "$wgScriptPath/skins";
@@ -35,22 +34,21 @@ $wgLogo             = "$wgScriptPath/zaurus-wglogo.gif";
 $wgUploadPath       = "$wgScriptPath/images";
 $wgUploadDirectory  = "$IP/images";
 
-$wgEnableEmail = true;
-$wgEnableUserEmail  = true;
-
-$wgEmergencyContact = "openzaurus-wikiadmin@rinspin.com";
-$wgPasswordSender   = "openzaurus-password@rinspin.com";
+$wgEnableEmail      = false;
+$wgEnableUserEmail  = false;
 
 ## For a detailed description of the following switches see
 ## http://meta.wikimedia.org/Enotif and http://meta.wikimedia.org/Eauthent
 ## There are many more options for fine tuning available see
 ## /includes/DefaultSettings.php
 ## UPO means: this is also a user preference option
-$wgEnotifUserTalk = true; # UPO
-$wgEnotifWatchlist = true; # UPO
-$wgEmailAuthentication = true;
+$wgEnotifUserTalk = false; # UPO
+$wgEnotifWatchlist = false; # UPO
+$wgEmailAuthentication = false;
 
-require_once("LocalDB.php");
+$wgDBprefix = "mw_";
+$wgDBmysql4 = false;   # If you're on MySQL 3.x, this must be FALSE:
+$wgDBmysql5 = false;   # Experimental charset support for MySQL 4.1/5.0.
 
 ## Shared memory settings
 $wgMainCacheType = CACHE_NONE;
@@ -58,8 +56,8 @@ $wgMemCachedServers = array();
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then uncomment this:
-$wgEnableUploads		= true;
-$wgUseImageResize		= true;
+$wgEnableUploads   = true;
+$wgUseImageResize  = true;
 #$wgUseImageMagick = true;
 #$wgImageMagickConvertCommand = "/usr/bin/convert";
 
@@ -82,22 +80,13 @@ $wgLanguageCode = "en";
 
 $wgProxyKey = "d630168d8a145e91dfc0f80eab98d79e061d8751c9eaf8f389f42236045058ec";
 
-## Default skin: you can change the default skin. Use the internal symbolic
-## names, ie 'standard', 'nostalgia', 'cologneblue', 'monobook':
-# $wgDefaultSkin = 'monobook';
-
-## For attaching licensing metadata to pages, and displaying an
-## appropriate copyright notice / icon. GNU Free Documentation
-## License and Creative Commons licenses are supported so far.
 $wgEnableCreativeCommonsRdf = true;
-$wgRightsPage = ""; # Set to the title of a wiki page that describes your license/copyright
+$wgRightsPage = "OpenZaurus:Copyrights";
 $wgRightsUrl = "http://creativecommons.org/licenses/by-nc-sa/2.5/";
 $wgRightsText = "Attribution-NonCommercial-ShareAlike 2.5";
 $wgRightsIcon = "http://creativecommons.org/images/public/somerights20.png";
-# $wgRightsCode = "[license_code]"; # Not yet used
 
 $wgDiff3 = "";
-
 
 # $wgCacheEpoch = '20060413190000';
 require("extensions/TimestampNow.php");
@@ -116,4 +105,6 @@ $wgShowIPinHeader = false;
 
 # Get rid of all skins except for MonoBook -- too much to support otherwise.
 $wgSkipSkins = array(simple, chick, cologneblue, myskin, standard /* called Classic */, nostalgia);
+
+require_once("SiteSettings.php");
 ?>

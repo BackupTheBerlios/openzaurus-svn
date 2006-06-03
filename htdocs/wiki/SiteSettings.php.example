@@ -1,0 +1,14 @@
+<?php
+
+# This file customizes this installation to run at your particular site.
+# Modify each line as needed.  This file overrides both LocalSettings.php
+# and includes/DefaultSettings.php.
+
+$wgDBserver         = "db.example.com";
+$wgDBname           = "db_name";
+$wgDBuser           = "db_user";
+$wgDBpassword       = "db_pass";
+
+$wgEmergencyContact = "me@example.com";
+
+?>
