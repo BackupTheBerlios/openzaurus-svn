@@ -1,0 +1,4 @@
+?? Will we need to get rid of mw_recentchanges?  This is a pretty hot table.
+?? Will we need to quiet down the pagecounters in mw_page?
+?? Will the fulltext index be a problem?  Why not just drop it and
+   then re-create on the mirror after loading new data?

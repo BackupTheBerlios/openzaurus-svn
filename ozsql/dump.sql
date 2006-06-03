@@ -8,6 +8,7 @@
 -- Table structure for table 'mw_archive'
 --
 
+DROP TABLE IF EXISTS mw_archive;
 CREATE TABLE mw_archive (
   ar_namespace int(11) NOT NULL default '0',
   ar_title varchar(255) binary NOT NULL default '',
@@ -33,6 +34,7 @@ CREATE TABLE mw_archive (
 -- Table structure for table 'mw_categorylinks'
 --
 
+DROP TABLE IF EXISTS mw_categorylinks;
 CREATE TABLE mw_categorylinks (
   cl_from int(8) unsigned NOT NULL default '0',
   cl_to varchar(255) binary NOT NULL default '',
@@ -53,6 +55,7 @@ CREATE TABLE mw_categorylinks (
 -- Table structure for table 'mw_hitcounter'
 --
 
+DROP TABLE IF EXISTS mw_hitcounter;
 CREATE TABLE mw_hitcounter (
   hc_id int(10) unsigned NOT NULL default '0'
 ) TYPE=HEAP MAX_ROWS=25000;
@@ -67,6 +70,7 @@ CREATE TABLE mw_hitcounter (
 -- Table structure for table 'mw_image'
 --
 
+DROP TABLE IF EXISTS mw_image;
 CREATE TABLE mw_image (
   img_name varchar(255) binary NOT NULL default '',
   img_size int(8) unsigned NOT NULL default '0',
@@ -96,6 +100,7 @@ CREATE TABLE mw_image (
 -- Table structure for table 'mw_imagelinks'
 --
 
+DROP TABLE IF EXISTS mw_imagelinks;
 CREATE TABLE mw_imagelinks (
   il_from int(8) unsigned NOT NULL default '0',
   il_to varchar(255) binary NOT NULL default '',
@@ -113,6 +118,7 @@ CREATE TABLE mw_imagelinks (
 -- Table structure for table 'mw_interwiki'
 --
 
+DROP TABLE IF EXISTS mw_interwiki;
 CREATE TABLE mw_interwiki (
   iw_prefix char(32) NOT NULL default '',
   iw_url char(127) NOT NULL default '',
@@ -131,6 +137,7 @@ CREATE TABLE mw_interwiki (
 -- Table structure for table 'mw_ipblocks'
 --
 
+DROP TABLE IF EXISTS mw_ipblocks;
 CREATE TABLE mw_ipblocks (
   ipb_id int(8) NOT NULL auto_increment,
   ipb_address varchar(40) binary NOT NULL default '',
@@ -155,6 +162,7 @@ CREATE TABLE mw_ipblocks (
 -- Table structure for table 'mw_logging'
 --
 
+DROP TABLE IF EXISTS mw_logging;
 CREATE TABLE mw_logging (
   log_type varchar(10) NOT NULL default '',
   log_action varchar(10) NOT NULL default '',
@@ -186,6 +194,7 @@ INSERT INTO mw_logging VALUES ('move','move','20060524220737',4,0,'Portrait','',
 -- Table structure for table 'mw_math'
 --
 
+DROP TABLE IF EXISTS mw_math;
 CREATE TABLE mw_math (
   math_inputhash varchar(16) NOT NULL default '',
   math_outputhash varchar(16) NOT NULL default '',
@@ -205,6 +214,7 @@ CREATE TABLE mw_math (
 -- Table structure for table 'mw_objectcache'
 --
 
+DROP TABLE IF EXISTS mw_objectcache;
 CREATE TABLE mw_objectcache (
   keyname varchar(255) binary NOT NULL default '',
   value mediumblob,
@@ -223,6 +233,7 @@ CREATE TABLE mw_objectcache (
 -- Table structure for table 'mw_oldimage'
 --
 
+DROP TABLE IF EXISTS mw_oldimage;
 CREATE TABLE mw_oldimage (
   oi_name varchar(255) binary NOT NULL default '',
   oi_archive_name varchar(255) binary NOT NULL default '',
@@ -247,6 +258,7 @@ CREATE TABLE mw_oldimage (
 -- Table structure for table 'mw_page'
 --
 
+DROP TABLE IF EXISTS mw_page;
 CREATE TABLE mw_page (
   page_id int(8) unsigned NOT NULL auto_increment,
   page_namespace int(11) NOT NULL default '0',
@@ -1554,9 +1566,9 @@ INSERT INTO mw_page VALUES (1281,8,'Yourvariant','sysop',0,0,0,0.654894406663,'2
 INSERT INTO mw_page VALUES (1282,0,'Collie','',1271,0,0,0.37037499208,'20060531195352',1910,2297);
 INSERT INTO mw_page VALUES (1283,0,'PortraitFormFactor','',296,0,0,0.442662811614,'20060524223434',1831,853);
 INSERT INTO mw_page VALUES (1284,0,'C7x0','',526,0,0,0.04643575488,'20060502125959',1668,755);
-INSERT INTO mw_page VALUES (1285,0,'Spitz','',799,0,0,0.442662811614,'20060523092733',1814,1323);
+INSERT INTO mw_page VALUES (1285,0,'Spitz','',800,0,0,0.442662811614,'20060523092733',1814,1323);
 INSERT INTO mw_page VALUES (1286,0,'DogName','',99,0,0,0.667111407526,'20060414004712',1512,464);
-INSERT INTO mw_page VALUES (1287,0,'Admin','move=sysop:edit=sysop',226,0,0,0.810743562928,'20060602234148',1949,3616);
+INSERT INTO mw_page VALUES (1287,0,'Admin','move=sysop:edit=sysop',228,0,0,0.810743562928,'20060603122009',1951,3801);
 INSERT INTO mw_page VALUES (1288,0,'ShowTimestamp','',27,0,0,0.688210462829,'20060412154209',1329,403);
 INSERT INTO mw_page VALUES (1289,0,'Style_Guide','',407,0,0,0.506195356726,'20060522093127',1704,2980);
 INSERT INTO mw_page VALUES (1290,0,'Poodle','',420,0,0,0.023707630469,'20060414151437',1558,421);
@@ -1588,8 +1600,8 @@ INSERT INTO mw_page VALUES (1315,4,'Copyrights','',59,0,1,0.45964028361,'2006041
 INSERT INTO mw_page VALUES (1316,12,'Contents','',146,0,0,0.770269792103,'20060506153621',1714,1519);
 INSERT INTO mw_page VALUES (1317,0,'Sandbox','',19,0,0,0.842713670157,'20060427201423',1627,121);
 INSERT INTO mw_page VALUES (1318,12,'Sidebar','',12,0,1,0.664555418341,'20060413150745',1439,682);
-INSERT INTO mw_page VALUES (1319,2,'Bronson','',250,0,0,0.108137239375,'20060503220333',1622,3309);
-INSERT INTO mw_page VALUES (1320,0,'Users','',734,0,0,0.883892036061,'20060602074455',1929,529);
+INSERT INTO mw_page VALUES (1319,2,'Bronson','',251,0,0,0.108137239375,'20060503220333',1622,3309);
+INSERT INTO mw_page VALUES (1320,0,'Users','',735,0,0,0.883892036061,'20060602074455',1929,529);
 INSERT INTO mw_page VALUES (1321,12,'Editing','',78,0,0,0.212435756255,'20060413184411',1457,2176);
 INSERT INTO mw_page VALUES (1322,0,'User_page','',63,0,0,0.482829091106,'20060414003921',1509,629);
 INSERT INTO mw_page VALUES (1323,4,'Protected_page_guidelines','',4,0,1,0.222096259784,'20060413192956',1465,9);
@@ -1620,7 +1632,7 @@ INSERT INTO mw_page VALUES (1347,0,'Poodle/Install','',335,0,0,0.268688714388,'2
 INSERT INTO mw_page VALUES (1348,0,'Tosa/Install','',301,0,0,0.138305203179,'20060425155804',1618,2892);
 INSERT INTO mw_page VALUES (1349,0,'C7x0/Install','',509,0,1,0.330658801871,'20060414145841',1553,2609);
 INSERT INTO mw_page VALUES (1350,0,'Akita/Install','',469,0,0,0.978571643691,'20060527114357',1879,2693);
-INSERT INTO mw_page VALUES (1351,0,'Spitz/Install','',1171,0,0,0.449715798358,'20060523092542',1815,12391);
+INSERT INTO mw_page VALUES (1351,0,'Spitz/Install','',1172,0,0,0.449715798358,'20060523092542',1815,12391);
 INSERT INTO mw_page VALUES (1352,10,'Sandbox/TranslcudedPage','',14,0,1,0.517392795731,'20060414153847',1567,100);
 INSERT INTO mw_page VALUES (1353,10,'TranslcudeExample','',41,0,0,0.676073245387,'20060414165656',1573,115);
 INSERT INTO mw_page VALUES (1354,0,'HowTos/Install_more_Applications','',749,0,0,0.972759380621,'20060416094130',1607,649);
@@ -1639,7 +1651,7 @@ INSERT INTO mw_page VALUES (1366,0,'HowTos/Root_Filesystem_on_external_media',''
 INSERT INTO mw_page VALUES (1367,0,'HowTos/Root_on_SD','',2,1,1,0.978610919847,'20060429230807',1646,54);
 INSERT INTO mw_page VALUES (1368,0,'ReleaseNotes/Oz3541','',894,0,0,0.053371009866,'20060602074835',1933,3850);
 INSERT INTO mw_page VALUES (1369,2,'Caligari','',69,0,0,0.676164355778,'20060503041824',1675,897);
-INSERT INTO mw_page VALUES (1370,2,'JTD','',37,0,0,0.472648943498,'20060515051851',1747,286);
+INSERT INTO mw_page VALUES (1370,2,'JTD','',38,0,0,0.472648943498,'20060515051851',1747,286);
 INSERT INTO mw_page VALUES (1371,2,'Mickeyl','',104,0,0,0.725922244941,'20060502130456',1671,362);
 INSERT INTO mw_page VALUES (1372,0,'Opie_vs._GPE','',0,0,1,0.352781067466,'20060503215946',1687,373);
 INSERT INTO mw_page VALUES (1373,3,'Bronson','',24,0,0,0.287309103855,'20060504170958',1698,758);
@@ -1679,6 +1691,7 @@ INSERT INTO mw_page VALUES (1404,0,'HowTos/SanDisk_ConnectPlus_wi-fi_with_collie
 -- Table structure for table 'mw_pagelinks'
 --
 
+DROP TABLE IF EXISTS mw_pagelinks;
 CREATE TABLE mw_pagelinks (
   pl_from int(8) unsigned NOT NULL default '0',
   pl_namespace int(11) NOT NULL default '0',
@@ -1732,6 +1745,7 @@ INSERT INTO mw_pagelinks VALUES (1286,0,'Poodle');
 INSERT INTO mw_pagelinks VALUES (1286,0,'Spitz');
 INSERT INTO mw_pagelinks VALUES (1286,0,'Terrier');
 INSERT INTO mw_pagelinks VALUES (1286,0,'Tosa');
+INSERT INTO mw_pagelinks VALUES (1287,0,'Admin/MirrorWiki');
 INSERT INTO mw_pagelinks VALUES (1287,0,'ShowTimestamp');
 INSERT INTO mw_pagelinks VALUES (1287,4,'About');
 INSERT INTO mw_pagelinks VALUES (1287,8,'Sidebar');
@@ -1953,6 +1967,7 @@ INSERT INTO mw_pagelinks VALUES (1400,2,'OlivierBerger');
 -- Table structure for table 'mw_querycache'
 --
 
+DROP TABLE IF EXISTS mw_querycache;
 CREATE TABLE mw_querycache (
   qc_type char(32) NOT NULL default '',
   qc_value int(5) unsigned NOT NULL default '0',
@@ -1971,6 +1986,7 @@ CREATE TABLE mw_querycache (
 -- Table structure for table 'mw_recentchanges'
 --
 
+DROP TABLE IF EXISTS mw_recentchanges;
 CREATE TABLE mw_recentchanges (
   rc_id int(8) NOT NULL auto_increment,
   rc_timestamp varchar(14) binary NOT NULL default '',
@@ -2047,7 +2063,7 @@ INSERT INTO mw_recentchanges VALUES (423,'20060520183626','20060602083546',16,'J
 INSERT INTO mw_recentchanges VALUES (422,'20060520062033','20060522134333',0,'82.32.57.69',0,'HowTos/OPIE_and_GPE','',0,0,0,1381,1763,1762,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (421,'20060520061932','20060522134333',0,'82.32.57.69',0,'HowTos/OPIE_and_GPE','',0,0,0,1381,1762,1761,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (420,'20060520061803','20060522134333',0,'82.32.57.69',0,'HowTos/OPIE_and_GPE','',0,0,0,1381,1761,1755,0,0,'',0,'');
-INSERT INTO mw_recentchanges VALUES (419,'20060519134449','20060602234148',5,'Bronson',0,'Admin','',0,0,0,1287,1760,1581,0,0,'',0,'');
+INSERT INTO mw_recentchanges VALUES (419,'20060519134449','20060603122009',5,'Bronson',0,'Admin','',0,0,0,1287,1760,1581,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (418,'20060519134223','20060601164107',5,'Bronson',0,'Main_Page','',0,0,0,1,1759,1758,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (417,'20060519134127','20060601164107',5,'Bronson',0,'Main_Page','',0,0,0,1,1758,1757,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (416,'20060519134012','20060601164107',5,'Bronson',0,'Main_Page','',0,0,0,1,1757,1619,0,0,'',0,'');
@@ -2248,7 +2264,7 @@ INSERT INTO mw_recentchanges VALUES (512,'20060525103045','20060602074835',4,'Ol
 INSERT INTO mw_recentchanges VALUES (513,'20060525112048','20060525112048',40,'Lestat',2,'Lestat','',0,0,1,1396,1855,0,1,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (514,'20060525123344','20060531195352',5,'Bronson',0,'Collie','',0,0,0,1282,1856,1741,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (515,'20060525124530','20060601164107',5,'Bronson',0,'Main_Page','',0,0,0,1,1857,1759,0,0,'',0,'');
-INSERT INTO mw_recentchanges VALUES (516,'20060525134920','20060602234148',5,'Bronson',0,'Admin','',0,0,0,1287,1858,1760,0,0,'',0,'');
+INSERT INTO mw_recentchanges VALUES (516,'20060525134920','20060603122009',5,'Bronson',0,'Admin','',0,0,0,1287,1858,1760,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (517,'20060525172646','20060602083546',0,'209.10.89.3',0,'FAQ','/* Zarus SL-5500 + OpenZaurus 3.5.4 */ zarus->zaurus',0,0,0,1310,1859,1844,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (518,'20060525231925','20060531195352',2,'MarcinHrwJuszkiewicz',0,'Collie','',0,0,0,1282,1860,1856,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (519,'20060526100912','20060602052809',36,'Speculatrix',0,'HowTos','/* English */',0,0,0,1309,1861,1784,0,0,'',0,'');
@@ -2301,8 +2317,8 @@ INSERT INTO mw_recentchanges VALUES (565,'20060531095753','20060531095753',0,'80
 INSERT INTO mw_recentchanges VALUES (566,'20060531195103','20060531195352',5,'Bronson',0,'Collie','',0,0,0,1282,1908,1899,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (567,'20060531195209','20060531195352',5,'Bronson',0,'Collie','',0,0,0,1282,1909,1908,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (568,'20060531195352','20060531195352',5,'Bronson',0,'Collie','',0,0,0,1282,1910,1909,0,0,'',0,'');
-INSERT INTO mw_recentchanges VALUES (569,'20060531213731','20060602234148',5,'Bronson',0,'Admin','',0,0,0,1287,1911,1858,0,0,'',0,'');
-INSERT INTO mw_recentchanges VALUES (570,'20060601120626','20060602234148',2,'MarcinHrwJuszkiewicz',0,'Admin','show real names.',0,0,0,1287,1912,1911,0,0,'',0,'');
+INSERT INTO mw_recentchanges VALUES (569,'20060531213731','20060603122009',5,'Bronson',0,'Admin','',0,0,0,1287,1911,1858,0,0,'',0,'');
+INSERT INTO mw_recentchanges VALUES (570,'20060601120626','20060603122009',2,'MarcinHrwJuszkiewicz',0,'Admin','show real names.',0,0,0,1287,1912,1911,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (571,'20060601141324','20060602083546',0,'194.226.118.39',0,'FAQ','/* Work In Progress */',0,0,0,1310,1913,1890,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (572,'20060601141349','20060602083546',0,'194.226.118.39',0,'FAQ','/* Work In Progress */',0,0,0,1310,1914,1913,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (573,'20060601141500','20060602083546',0,'194.226.118.39',0,'FAQ','/* Work In Progress */',0,0,0,1310,1915,1914,0,0,'',0,'');
@@ -2312,8 +2328,8 @@ INSERT INTO mw_recentchanges VALUES (576,'20060601151731','20060601151731',0,'80
 INSERT INTO mw_recentchanges VALUES (577,'20060601155850','20060602083546',0,'81.173.142.248',0,'FAQ','/* OPIE related questions */',0,0,0,1310,1919,1917,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (578,'20060601160237','20060602083546',0,'81.173.142.248',0,'FAQ','/* WiFi related questions */',0,0,0,1310,1920,1919,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (579,'20060601160409','20060602083546',0,'81.173.142.248',0,'FAQ','/* WiFi related questions */',0,0,0,1310,1921,1920,0,0,'',0,'');
-INSERT INTO mw_recentchanges VALUES (580,'20060601163139','20060602234148',5,'Bronson',0,'Admin','',0,0,0,1287,1922,1912,0,0,'',0,'');
-INSERT INTO mw_recentchanges VALUES (581,'20060601163231','20060602234148',5,'Bronson',0,'Admin','',0,0,0,1287,1923,1922,0,0,'',0,'');
+INSERT INTO mw_recentchanges VALUES (580,'20060601163139','20060603122009',5,'Bronson',0,'Admin','',0,0,0,1287,1922,1912,0,0,'',0,'');
+INSERT INTO mw_recentchanges VALUES (581,'20060601163231','20060603122009',5,'Bronson',0,'Admin','',0,0,0,1287,1923,1922,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (582,'20060601164107','20060601164107',5,'Bronson',0,'Main_Page','',0,0,0,1,1924,1891,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (583,'20060602044447','20060602052809',44,'Sharukh',0,'HowTos','/* English */',0,0,0,1309,1925,1861,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (584,'20060602051759','20060602051759',44,'Sharukh',0,'HowTos/SanDisk_ConnectPlus_wi-fi_with_collie','',0,0,1,1404,1926,0,1,0,'',0,'');
@@ -2339,12 +2355,15 @@ INSERT INTO mw_recentchanges VALUES (603,'20060602082913','20060602083546',2,'Ma
 INSERT INTO mw_recentchanges VALUES (604,'20060602083109','20060602083546',16,'JTD',0,'FAQ','/* Work In Progress */',0,0,0,1310,1946,1945,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (605,'20060602083339','20060602083546',16,'JTD',0,'FAQ','/* Bluetooth related questions */',0,0,0,1310,1947,1946,0,0,'',0,'');
 INSERT INTO mw_recentchanges VALUES (606,'20060602083546','20060602083546',16,'JTD',0,'FAQ','/* General questions */',0,0,0,1310,1948,1947,0,0,'',0,'');
-INSERT INTO mw_recentchanges VALUES (607,'20060602234148','20060602234148',5,'Bronson',0,'Admin','/* Done */',0,0,0,1287,1949,1923,0,0,'',0,'');
+INSERT INTO mw_recentchanges VALUES (607,'20060602234148','20060603122009',5,'Bronson',0,'Admin','/* Done */',0,0,0,1287,1949,1923,0,0,'',0,'');
+INSERT INTO mw_recentchanges VALUES (608,'20060603120109','20060603122009',5,'Bronson',0,'Admin','/* Done */',0,0,0,1287,1950,1949,0,0,'',0,'');
+INSERT INTO mw_recentchanges VALUES (609,'20060603122009','20060603122009',5,'Bronson',0,'Admin','',0,0,0,1287,1951,1950,0,0,'',0,'');
 
 --
 -- Table structure for table 'mw_revision'
 --
 
+DROP TABLE IF EXISTS mw_revision;
 CREATE TABLE mw_revision (
   rev_id int(8) unsigned NOT NULL auto_increment,
   rev_page int(8) unsigned NOT NULL default '0',
@@ -4317,11 +4336,14 @@ INSERT INTO mw_revision VALUES (1946,1310,1944,'/* Work In Progress */',16,'JTD'
 INSERT INTO mw_revision VALUES (1947,1310,1945,'/* Bluetooth related questions */',16,'JTD','20060602083339',0,0);
 INSERT INTO mw_revision VALUES (1948,1310,1946,'/* General questions */',16,'JTD','20060602083546',0,0);
 INSERT INTO mw_revision VALUES (1949,1287,1947,'/* Done */',5,'Bronson','20060602234148',0,0);
+INSERT INTO mw_revision VALUES (1950,1287,1948,'/* Done */',5,'Bronson','20060603120109',0,0);
+INSERT INTO mw_revision VALUES (1951,1287,1949,'',5,'Bronson','20060603122009',0,0);
 
 --
 -- Table structure for table 'mw_searchindex'
 --
 
+DROP TABLE IF EXISTS mw_searchindex;
 CREATE TABLE mw_searchindex (
   si_page int(8) unsigned NOT NULL default '0',
   si_title varchar(255) NOT NULL default '',
@@ -4343,7 +4365,7 @@ INSERT INTO mw_searchindex VALUES (1393,'clamshell',' clamshell is the formfacto
 INSERT INTO mw_searchindex VALUES (1284,'c7x0',' see c7x0 install for installation instructions c7x0 is a nickname for 1st generation of zaurus clamshells c700 - corgi c750 - shepherd also sold as sl-7500 for chinese market - have other keyboard layout c760 - husky c860 - boxer same as husky - other colors they are supported since openzaurus 3 5 1 and was first models with fully working 2 6 kernel when 2 4 kernel was used each machine required own kernel - we united them under 2 6 so one kernel is enough for all machines from hardware point of view there are three models corgi pxa250 64m flash 32m ram shepherd pxa255 64m flash 64m ram husky boxer pxa255 128m flash 64m ram if we ignore cpu flash ram differences then we got only one model left c7x0 ');
 INSERT INTO mw_searchindex VALUES (1285,'spitz',' see spitz install for installation instructions spitz is a dogname for sl-c3000 but when we started work on openzaurus 3 5 4 1 we decided to merge sl-c3000 spitz sl-c3100 borzoi sl-c3200 terrier into one machine just like it was done with c7x0 before sl-c3000 is supported since openzaurus 3 5 3 - we used 2 4 20-crappix kernel from sharplineo sharp & lineo and all stuff was installed on the first microdrive partition the device was booting from flash and then performed a pivot_root into the microdrive this procedure is not supported in openzaurus 3 5 4 because we decided to not use 2 4 20-crappix when we have a nearly ready 2 6 15 kernel starting from 3 5 4 1 oe on the spitz including borzoi and terrier platform supports the 2 6 kernel and can boot directly from microdrive flash partitions are not used at all for storage differencies between spitz submachines spitz - sl-c3000 pxa270 16m flash 64m ram 4gb microdrive borzoi - sl-c3100 pxa270 128m flash 64m ram 4gb microdrive terrier - sl-c3200 pxa270 128m flash 64m ram 6gb microdrive issues with restoring a nand backup on sl-c3000 issues with restoring a nand backup on sl-c3000 issues with restoring a nand backup on sl-c3000 i had trouble restoring a nand backup from cf after putting it onto a sd card everything worked just fine -- user sybren sybren 11 24 23 may 2006 bst ');
 INSERT INTO mw_searchindex VALUES (1286,'dogname',' sharp uses dog names for naming zauruses why did they do that who knows you can also browse by models model number anyway here goes the list collie - sl-5000 sl-5500 poodle - sl-5600 sl-b500 tosa - sl-6000 c7x0 corgi - sl-c700 c7x0 shepherd - sl-c750 sl-7500 c7x0 husky - sl-c760 c7x0 boxer - sl-c860 akita - sl-c1000 spitz - sl-c3000 borzoi - sl-c3100 terrier - sl-c3200 ');
-INSERT INTO mw_searchindex VALUES (1287,'admin',' in a few weeks or months we might remove the link to this page from the home page you can always get to this page by visiting pages monitoring pages monitoring pages an rss feed reader is the best tool to use to monitor the entire site for changes simply subscribe to this url this is most useful for site admins in addition when you create an account you can set up your preferences so that you can be sent an email whenever a page that you have previously edited is changed you can also manually subscribe to individual pages click on create an account in the upper right-hand corner this is most useful for site contributors controlling spam controlling spam controlling spam the wiki currently allows unregistered users to edit the site this helps encourage people to contribute content when spam becomes a problem we will be forced to make the site more restrictive when spammers hit the site their changes are very easily reverted view the page page\'s history click on the date of the page you\'d like to revert to this opens that revision in an edit window ignore the warning about an out of date copy and save the page the spam has been eradicated navigation links navigation links navigation links to change the always-visible navigation links modify mediawiki sidebar see help sidebar for more only admins can edit the sidebar see wikimedia for more information todo todo todo add a todo template and a skeleton template so we can keep track of the parts of the wiki that are in desperate need of attention setup automatic backups for the database and the site repo what about uploaded images test image upload this is fairly low priority but might be useful screenshot galleries would be especially nice much later ask someone to create a custom theme look to or for inspiration ensure that the new theme is easily read on zaruses even 240 pix wide done done done 2 jun 2006 put software in oz svn so others can mirror it 1 jun 2006 added google analytics stub to all pages disabled all skins except for monobook because otherwise i\'d have to update each skin individually 30 may 2006 kergoth pointed wiki openzaurus org to this wiki 25 may 2006 incorproated new oz logo got rid of wikipedia daisy bg image 14 apr 2006 added a openzaurus about contact link to the sidebar 14 apr 2006 ensured that the berlios logo is displayed on every page 14 apr 2006 created the virtual host for wiki openzaurus org now just need to update openzaurus org dns kergoth 13 apr 2006 placed site content under version control subversion repo is in bronson wikirepo can\'t use berlios public svn since this repo contains passwords users who are part of the berlios openzaurus group can access it svn co file localhost home users bronson wikirepo 12 apr 2006 add a param to ignore any cached pages older than a given date showtimestamp 12 apr 2006 get rid of index php in the urls that was painful -- wgcacheepoch appears to be ignored tools tools tools showtimestamp showtimestampstatistics statistics statistics site statistics google analytics phpinfo ');
+INSERT INTO mw_searchindex VALUES (1287,'admin',' in a few weeks or months we might remove the link to this page from the home page you can always get to this page by visiting pages monitoring pages monitoring pages an rss feed reader is the best tool to use to monitor the entire site for changes simply subscribe to this url this is most useful for site admins in addition when you create an account you can set up your preferences so that you can be sent an email whenever a page that you have previously edited is changed you can also manually subscribe to individual pages click on create an account in the upper right-hand corner this is most useful for site contributors controlling spam controlling spam controlling spam the wiki currently allows unregistered users to edit the site this helps encourage people to contribute content when spam becomes a problem we will be forced to make the site more restrictive when spammers hit the site their changes are very easily reverted view the page page\'s history click on the date of the page you\'d like to revert to this opens that revision in an edit window ignore the warning about an out of date copy and save the page the spam has been eradicated changing the sidebar changing the sidebar changing the sidebar to change the always-visible navigation links modify mediawiki sidebar see help sidebar for more only admins can edit the sidebar see wikimedia for more information mirroring mirroring mirroring admin mirrorwiki mirrorwikitodo todo todo add a todo template and a skeleton template so we can keep track of the parts of the wiki that are in desperate need of attention setup automatic backups for the database and the site repo what about uploaded images test image upload this is fairly low priority but might be useful screenshot galleries would be especially nice much later ask someone to create a custom theme look to or for inspiration ensure that the new theme is easily read on zaruses even 240 pix wide done done done 3 jun 2006 erased all rows from the interwiki table -- we\'re not associated with any of these sites 2 jun 2006 put software in svn so others can mirror it 1 jun 2006 added google analytics stub to all pages disabled all skins except for monobook because otherwise i\'d have to update each skin individually 30 may 2006 kergoth pointed wiki openzaurus org to this wiki 25 may 2006 incorproated new oz logo got rid of wikipedia daisy bg image 14 apr 2006 added a openzaurus about contact link to the sidebar 14 apr 2006 ensured that the berlios logo is displayed on every page 14 apr 2006 created the virtual host for wiki openzaurus org now just need to update openzaurus org dns kergoth 13 apr 2006 placed site content under version control subversion repo is in bronson wikirepo can\'t use berlios public svn since this repo contains passwords users who are part of the berlios openzaurus group can access it svn co file localhost home users bronson wikirepo 12 apr 2006 add a param to ignore any cached pages older than a given date showtimestamp 12 apr 2006 get rid of index php in the urls that was painful -- wgcacheepoch appears to be ignored tools tools tools showtimestamp showtimestampstatistics statistics statistics site statistics google analytics phpinfo ');
 INSERT INTO mw_searchindex VALUES (1288,'showtimestamp',' when you make a change to the configuration that invalidates a large number of cached pages the easiest way to clear the cache is to simply cause mediawiki to ignore any page older than the time at which you made the change simply add this configuration item to localsettings php wgcacheepoch \' \'; this page requires the timestampnow extension to be installed ');
 INSERT INTO mw_searchindex VALUES (1289,'style guide',' this page contains some guidelines to use when adding documentation to this site as long as pages follow these rules we can maintain some consistency across the site it it\'s zauruses not zaurii or other odd pluralizations zaurus is always capitalized always use dogname dognames unless you need to make a distinction of devices in the same family  the collie and poodle are portrait zauruses of these devices the sl-5000 and sl-5600 have 32 mb of ram while the sl-5500 has 64 mb   dogname dognames and models model names always redirect to the appropriate page well it it\'s not obvious to do that since dognames are not wiki words mix of upper lower case so not specially easy to type when writing inn the wiki -- user olivierberger olivierberger 13 14 13 april 2006 bst mediawiki doesn\'t really use wikiwords anyway it requires brackets for each link -- user bronson bronson 18 48 13 april 2006 bst you can\'t use periods in page names opie vs gpe will return a 404 error so use opie vs gpe on this wiki periods are special because they distinguish between a virtual page_name and a physical image jpg use proper namespaces howtos passwordless ssh howtos root on sd collie install poodle install use language code after section name howtos fr le ru8c3a9seau par usb howtos de usb netzwerk the pages on this wiki should be used for professional objective presentation of information opinions and rants within reason are encouraged  as long as  they are on discussion pages or personal pages create an account to obtain a personal page edit early and edit often pursue brevity and accuracy when a discussion winds down replace it with a summary just the conclusions not a blow-by-blow when you make substantial edits consider moving the original text to the discussion page transclusion one problem with trying to organize openzaurus on a wiki is that a large number of pages share small pieces of information for instance you might want to include keymap information in both a device page and a kernel page but you don\'t want to duplicate this info all over the site because then changing it everywhere becomes a nightmare transclusion is the answer it allows you to include the content of a page within the content of any number of other pages when the transcluded page is updated those changes are immediately reflected in all parent pages here here\'s an example that embeds the template translcudeexample page within within this page translcudeexample simply surround the name of the page you want to transclude in curly braces template translcudeexample translcudeexample all transcluded pages must live in the template namespace ');
 INSERT INTO mw_searchindex VALUES (1290,'poodle',' see poodle install for installation instructions poodle refers to the zaurus sl-5600 also named b500 this device is similar to the collie except that it has 64 mb of flash instead of 16 mb and 32 mb of ram instead of 64 mb it is powered by the intel xscale pxa250 or pxa255 in newer ones the b500 is a variant of the poodle that was only sold in japan this device has the portrait form factor ');
@@ -4467,6 +4489,7 @@ INSERT INTO mw_searchindex VALUES (1403,'openembedded',' openembedded is a build
 -- Table structure for table 'mw_site_stats'
 --
 
+DROP TABLE IF EXISTS mw_site_stats;
 CREATE TABLE mw_site_stats (
   ss_row_id int(8) unsigned NOT NULL default '0',
   ss_total_views bigint(20) unsigned default '0',
@@ -4488,6 +4511,7 @@ CREATE TABLE mw_site_stats (
 -- Table structure for table 'mw_text'
 --
 
+DROP TABLE IF EXISTS mw_text;
 CREATE TABLE mw_text (
   old_id int(8) unsigned NOT NULL auto_increment,
   old_text mediumblob NOT NULL,
@@ -6447,11 +6471,14 @@ INSERT INTO mw_text VALUES (1944,'\'\'\'Frequently Asked Questions\'\'\'\n\n\n\'
 INSERT INTO mw_text VALUES (1945,'\'\'\'Frequently Asked Questions\'\'\'\n\n\n\'\'Please add answered FAQs below\'\'\n----\n\n== General questions ==\n\n; Can I use feeds from OpenZaurus 3.5.4 with 3.5.4.*?\n: Yes you can - OpenZaurus 3.5.4.1 is built with the same toolchain as 3.5.4 so it is compatible. Same thing will be with any 3.5.4.x releases.\n\n\n; Where shall bugs be reported?\n: It depends - as primary bugtracker we use OpenEmbedded one: http://bugs.openembedded.org/\n: GPE bugs should go into it\'s bugtracker: http://handhelds.org/bugzilla/\n: OPIE bugs should go into it\'s bugtracker: http://opie-bugs.oszine.de/\n\n\n; How to add questions into this list?\n: If you know the answer, just add it. If you think a question should be added but don\'t know the answer then add it in the WIP section below.\n\n\n; Ipkg complains about <tt>ldconfig</tt> not being found, did you screw up?\n: No, we didn’t screw that up, it just means that /sbin isn’t in your $PATH. Use ’<tt>su -</tt>’ to become root, not ’<tt>su</tt>’\n\n\n; How to compile programs for OpenZaurus?\n: You can use OpenEmbedded (the recommended option) or the SDK from http://ewi546.ewi.utwente.nl/mirror/www.openzaurus.org/official/unstable/3.5.4/sdk/\n\n\n; What should I choose, Opie or GPE?  How do they differ, which one has more apps available?\n: This is, of course, a subjective question.  The principle way in which they differ is that Opie uses the Qt/Embedded API and GPE uses \"real\" X Windows with the GTK+ toolkit.  Here is a link to the GPE project\'s webpage where you can find out more information: http://gpe.handhelds.org/ The Opie project\'s webpage can be found at http://opie.handhelds.org/cgi-bin/moin.cgi\n: As for which one has more applications available, the edge probably goes to Opie (for now, at least).  Opie\'s been around a bit longer and has the benefit of being able to run most of the original Sharp ROM programs more or less out of the box.  There\'s a lot of packages available for both in the feeds,  and the list grows all the time.  Give them both a shot and give your opinions at the [[Opie vs GPE]] page.\n\n\n; What\'s an e-image, available alongside with opie-image and gpe-image?\n: E17 (the Enlightenment window manager) running on top of X, sans GPE.  It doesn\'t work very well at the moment (6/02/06).\n\n\n; How do I enable swap?\n: Here\'s an example for 64 MB on an SD card:<br>\n<tt>\n: dd if=/dev/zero of=/mnt/card/swapfile bs=1M count=64<br>\n: mkswap /mnt/card/swapfile<br>\n: swapon /mnt/card/swapfile<br>\n</tt>\n\n\n== OPIE related questions ==\n\n; How can I activate the german keyboard, I found no documentation and keyz does not work on OZ 3.5.4.\n: Under OPIE on [[collie]] you can use <tt>opie-zkbapplet</tt> (which is based on keyz). Other option would be installing <tt>keymaps</tt> and <tt>keymap-locales</tt> and checking how it works.\n\n\n; I installed the sharp-compat-libs, but my sharp-based application doesn\'t seem to work right. What gives?\n: From a 04 Nov 2005 forum post by hrw: \'\'libqte used in sharp-compat-libs does not work with TrueType fonts (which are default in 3.5.4) so you have to install some of QPF fonts to get any application which use sharp-compat-libs working.\'\'\n\n\n; Which feeds are recommended fpr OPIE and related Software?\n: Those within /etc/ipkg.conf ...\n\n\n== GPE related questions ==\n\n; How do I get rid of this AWFUL rxvt black-on-white color scheme?!\n: We feel your pain.  :)  Go into your ~/.Xdefaults file for whatever user you want to change the colors for and enter lines like the following for a more pleasing color scheme:\n\n: <tt>Rxvt*background: black\n: Rxvt*foreground: green</tt>\n\n: While you\'re at it, you may want to change the size of the scrollbar to make it easier to grab ahold of with the stylus.\n\n: <tt>Rxvt*thickness: 20</tt>\n\n\n== WiFi related questions ==\n\n; When I insert card I got <tt>wifi0</tt> and <tt>wlan0</tt> interfaces - why and which one I should use?\n: From [http://hostap.epitest.fi/cgi-bin/viewcvs.cgi/*checkout*/hostap/FAQ?rev=HEAD&content-type=text/plain Hostap FAQ]:\n\n<pre>\n6. Why did I get two network interfaces (wlan0 and wifi0) even when I have\n   only one wireless card?\n\nHost AP driver supports multiple virtual interfaces per wireless\ncard. wifi0 is the master radio interface and wlan0 is the first\nvirtual interface for this radio. Other virtual interfaces are wlan0ap\n(for hostapd), and one interface per WDS link.\n\nIn most cases, one should ignore wifi0 interface and just use wlan0\ninterface. In other words, assign IP address to wlan0, not wifi0 and\nin general, just ignore the wifi0 interface.\n</pre>\n\n\n;I upgraded to OpenZaurus 3.5.4.1(-alpha2, rc, final) and my WiFi card is now detected as <tt>eth0</tt> instead of <tt>wlan0</tt> - why and how to change it?\n: OpenZaurus 3.5.4.1 was switched from <tt>pcmcia-cs</tt> used in all older releases and by 2.4 kernel powered devices to <tt>pcmciautils</tt>. Due to this driver mapping (which define which driver use for inserted card) is now handled by kernel drivers itself.\n\n: As a side effect many cards are now handled by <tt>Orinoco</tt> driver instead of <tt>HostAP</tt> one. There are two solutions for this.\n\n: First one is an quick workaround: remove all orinoco stuff by:\n\n ipkg remove -recursive *orinoco*\n\n: Second and preferred one is sending <tt>pccardctl ident</tt> to OpenZaurus Devel mailinglist so we can change mapping inside of kernel.\n\n\n; How should I do to configure WPA encryption ?\n: [[HowTos/roaming_with_wpa_supplicant | Roaming with WPA Supplicant HowTo]] can help. All you need is use of WPA Supplicant with correct network block created - details are in wpa-supplicant docs.\n\n\n; Which WiFi cards are known to work with OZ?\n: Any Prism2 based will work and many others. Look into <tt>/etc/pcmcia/</tt> files of your OpenZaurus installation to get list of working cards - there are too many of them to list. Many cards are also rebranded by vendors so it hard to provide full list.\n\n== Bluetooth related questions ==\n\n; Which Bluetooth cards are known to work with OZ?\n: Look into <tt>/etc/pcmcia/</tt> files of your OpenZaurus installation to get list of working cards - there are too many of them to list. Many cards are also rebranded by vendors so it hard to provide full list.\n: Remember that SDIO Bluetooth cards are not going to work (yet) because of the problem with writing drivers for them - we can\'t, their specs are closed.\n\n== SD Card related questions ==\n; Which SD Cards work with OpenZaurus\n: This seems to be related to the hardware.\n\n\n=== Zaurus SL-5500 + OpenZaurus 3.5.4 ===\n; SanDisk 512 MB SD card\n: Card will mount from the command-line but Opie says the slot is empty.  Syslog shows lots of errors trying to determine the file system and trying to find the superblock.  Card mounts properly on a Windows XP Professional system and on a Debian Linux (Etch) system.\n\n\n; SanDisk 128 MB SD card\n: Card will mount from the command-line but Opie says the slot is empty.  Syslog still shows errors.  Do other users have the same issues with SanDisk cards?  I do not have another brand available to test with.\n\n\n=== Zaurus SL-C1000 ===\n: SD Cards with SDIO won\'t work because we can\'t write drivers for them yet.  In the future, hardware vendors may supply us with binary modules, but don\'t hold your breath.\n: Kingston 256MB memory SD-Card is working fine.\n: A-Data 4GB memory SD-Card isn\'t working correctly with Sharp, CACKO and OZ 3.5.4.1-rc2, Zaurus stalls, reset is needed. Experts say this is a hardware intrinsic problem, because the chip doesn\'t understand to deal with blocksizes greater than 512. So there will be difficulties with all SD memory above 1GB. (If this is not true and you know SD-Cards with size 2GB or 4GB which work inside the SL-C1000 or a ROM which works with those cards, please tell us!)\n\nDeathWolf: i have a 4GB Transcend SD card on my sl-c1000 with cacko 1.23, with tetsu\'s patch, and it works real well. There have been numerous reports of bigger than 1GB card working.\n\n\n== Work In Progress ==\n\n\'\'Please add questions that require answers below\'\'\n\n\'\'Once they have been answered, move them up\'\'\n\n----\n\nWhat\'s the best system to use for syncing my Z to a desktop computer?  Do Opie\'s PIM applications work with Qtopia Desktop or some other well-known desktop PIM software such as Evolution?  I\'ve heard something about \"kopi,\" but don\'t know much about it and don\'t know if it would support the Z\'s built-in functions (such as beaming contacts with the IR port).  --[[User:JTD|JTD]] 23:39, 3 May 2006 (BST)\n\nI would like to extend this question to Windows computers. Working in my company I have to use Windows and Outlook on my desktop though I run Linux on all my servers. My Zaurus is a very nice piece of equipment but almost use less as I would need a PDA to synchronize Outlook with.','utf-8');
 INSERT INTO mw_text VALUES (1946,'\'\'\'Frequently Asked Questions\'\'\'\n\n\n\'\'Please add answered FAQs below\'\'\n----\n\n== General questions ==\n\n; Can I use feeds from OpenZaurus 3.5.4 with 3.5.4.*?\n: Yes you can - OpenZaurus 3.5.4.1 is built with the same toolchain as 3.5.4 so it is compatible. Same thing will be with any 3.5.4.x releases.\n\n\n; Where shall bugs be reported?\n: It depends - as primary bugtracker we use OpenEmbedded one: http://bugs.openembedded.org/\n: GPE bugs should go into it\'s bugtracker: http://handhelds.org/bugzilla/\n: OPIE bugs should go into it\'s bugtracker: http://opie-bugs.oszine.de/\n:\n: Remember - it is \'\'\'VERY\'\'\' important to log bugs.  If you\'re not sure whether something is a bug or not, ask around a bit, then submit it ANYWAY if you don\'t get a clear answer.  If it turns out you had something misconfigured, just resolve the bug yourself - no harm done!  This way we can fix issues as quickly as possible.\n\n\n; How to add questions into this list?\n: If you know the answer, just add it. If you think a question should be added but don\'t know the answer then add it in the WIP section below.\n\n\n; Ipkg complains about <tt>ldconfig</tt> not being found, did you screw up?\n: No, we didn’t screw that up, it just means that /sbin isn’t in your $PATH. Use ’<tt>su -</tt>’ to become root, not ’<tt>su</tt>’\n\n\n; How to compile programs for OpenZaurus?\n: You can use OpenEmbedded (the recommended option) or the SDK from http://ewi546.ewi.utwente.nl/mirror/www.openzaurus.org/official/unstable/3.5.4/sdk/\n\n\n; What should I choose, Opie or GPE?  How do they differ, which one has more apps available?\n: This is, of course, a subjective question.  The principle way in which they differ is that Opie uses the Qt/Embedded API and GPE uses \"real\" X Windows with the GTK+ toolkit.  Here is a link to the GPE project\'s webpage where you can find out more information: http://gpe.handhelds.org/ The Opie project\'s webpage can be found at http://opie.handhelds.org/cgi-bin/moin.cgi\n: As for which one has more applications available, the edge probably goes to Opie (for now, at least).  Opie\'s been around a bit longer and has the benefit of being able to run most of the original Sharp ROM programs more or less out of the box.  There\'s a lot of packages available for both in the feeds,  and the list grows all the time.  Give them both a shot and give your opinions at the [[Opie vs GPE]] page.\n\n\n; What\'s an e-image, available alongside with opie-image and gpe-image?\n: E17 (the Enlightenment window manager) running on top of X, sans GPE.  It doesn\'t work very well at the moment (6/02/06).\n\n\n; How do I enable swap?\n: Here\'s an example for 64 MB on an SD card:<br>\n<tt>\n: dd if=/dev/zero of=/mnt/card/swapfile bs=1M count=64<br>\n: mkswap /mnt/card/swapfile<br>\n: swapon /mnt/card/swapfile<br>\n</tt>\n\n== OPIE related questions ==\n\n; How can I activate the german keyboard, I found no documentation and keyz does not work on OZ 3.5.4.\n: Under OPIE on [[collie]] you can use <tt>opie-zkbapplet</tt> (which is based on keyz). Other option would be installing <tt>keymaps</tt> and <tt>keymap-locales</tt> and checking how it works.\n\n\n; I installed the sharp-compat-libs, but my sharp-based application doesn\'t seem to work right. What gives?\n: From a 04 Nov 2005 forum post by hrw: \'\'libqte used in sharp-compat-libs does not work with TrueType fonts (which are default in 3.5.4) so you have to install some of QPF fonts to get any application which use sharp-compat-libs working.\'\'\n\n\n; Which feeds are recommended fpr OPIE and related Software?\n: Those within /etc/ipkg.conf ...\n\n\n== GPE related questions ==\n\n; How do I get rid of this AWFUL rxvt black-on-white color scheme?!\n: We feel your pain.  :)  Go into your ~/.Xdefaults file for whatever user you want to change the colors for and enter lines like the following for a more pleasing color scheme:\n\n: <tt>Rxvt*background: black\n: Rxvt*foreground: green</tt>\n\n: While you\'re at it, you may want to change the size of the scrollbar to make it easier to grab ahold of with the stylus.\n\n: <tt>Rxvt*thickness: 20</tt>\n\n\n== WiFi related questions ==\n\n; When I insert card I got <tt>wifi0</tt> and <tt>wlan0</tt> interfaces - why and which one I should use?\n: From [http://hostap.epitest.fi/cgi-bin/viewcvs.cgi/*checkout*/hostap/FAQ?rev=HEAD&content-type=text/plain Hostap FAQ]:\n\n<pre>\n6. Why did I get two network interfaces (wlan0 and wifi0) even when I have\n   only one wireless card?\n\nHost AP driver supports multiple virtual interfaces per wireless\ncard. wifi0 is the master radio interface and wlan0 is the first\nvirtual interface for this radio. Other virtual interfaces are wlan0ap\n(for hostapd), and one interface per WDS link.\n\nIn most cases, one should ignore wifi0 interface and just use wlan0\ninterface. In other words, assign IP address to wlan0, not wifi0 and\nin general, just ignore the wifi0 interface.\n</pre>\n\n\n;I upgraded to OpenZaurus 3.5.4.1(-alpha2, rc, final) and my WiFi card is now detected as <tt>eth0</tt> instead of <tt>wlan0</tt> - why and how to change it?\n: OpenZaurus 3.5.4.1 was switched from <tt>pcmcia-cs</tt> used in all older releases and by 2.4 kernel powered devices to <tt>pcmciautils</tt>. Due to this driver mapping (which define which driver use for inserted card) is now handled by kernel drivers itself.\n\n: As a side effect many cards are now handled by <tt>Orinoco</tt> driver instead of <tt>HostAP</tt> one. There are two solutions for this.\n\n: First one is an quick workaround: remove all orinoco stuff by:\n\n ipkg remove -recursive *orinoco*\n\n: Second and preferred one is sending <tt>pccardctl ident</tt> to OpenZaurus Devel mailinglist so we can change mapping inside of kernel.\n\n\n; How should I do to configure WPA encryption ?\n: [[HowTos/roaming_with_wpa_supplicant | Roaming with WPA Supplicant HowTo]] can help. All you need is use of WPA Supplicant with correct network block created - details are in wpa-supplicant docs.\n\n\n; Which WiFi cards are known to work with OZ?\n: Any Prism2 based will work and many others. Look into <tt>/etc/pcmcia/</tt> files of your OpenZaurus installation to get list of working cards - there are too many of them to list. Many cards are also rebranded by vendors so it hard to provide full list.\n\n== Bluetooth related questions ==\n\n; Which Bluetooth cards are known to work with OZ?\n: Look into <tt>/etc/pcmcia/</tt> files of your OpenZaurus installation to get list of working cards - there are too many of them to list. Many cards are also rebranded by vendors so it hard to provide full list.\n: Remember that SDIO Bluetooth cards are not going to work (yet) because of the problem with writing drivers for them - we can\'t, their specs are closed.\n\n== SD Card related questions ==\n; Which SD Cards work with OpenZaurus\n: This seems to be related to the hardware.\n\n\n=== Zaurus SL-5500 + OpenZaurus 3.5.4 ===\n; SanDisk 512 MB SD card\n: Card will mount from the command-line but Opie says the slot is empty.  Syslog shows lots of errors trying to determine the file system and trying to find the superblock.  Card mounts properly on a Windows XP Professional system and on a Debian Linux (Etch) system.\n\n\n; SanDisk 128 MB SD card\n: Card will mount from the command-line but Opie says the slot is empty.  Syslog still shows errors.  Do other users have the same issues with SanDisk cards?  I do not have another brand available to test with.\n\n\n=== Zaurus SL-C1000 ===\n: SD Cards with SDIO won\'t work because we can\'t write drivers for them yet.  In the future, hardware vendors may supply us with binary modules, but don\'t hold your breath.\n: Kingston 256MB memory SD-Card is working fine.\n: A-Data 4GB memory SD-Card isn\'t working correctly with Sharp, CACKO and OZ 3.5.4.1-rc2, Zaurus stalls, reset is needed. Experts say this is a hardware intrinsic problem, because the chip doesn\'t understand to deal with blocksizes greater than 512. So there will be difficulties with all SD memory above 1GB. (If this is not true and you know SD-Cards with size 2GB or 4GB which work inside the SL-C1000 or a ROM which works with those cards, please tell us!)\n\nDeathWolf: i have a 4GB Transcend SD card on my sl-c1000 with cacko 1.23, with tetsu\'s patch, and it works real well. There have been numerous reports of bigger than 1GB card working.\n\n\n== Work In Progress ==\n\n\'\'Please add questions that require answers below\'\'\n\n\'\'Once they have been answered, move them up\'\'\n\n----\n\nWhat\'s the best system to use for syncing my Z to a desktop computer?  Do Opie\'s PIM applications work with Qtopia Desktop or some other well-known desktop PIM software such as Evolution?  I\'ve heard something about \"kopi,\" but don\'t know much about it and don\'t know if it would support the Z\'s built-in functions (such as beaming contacts with the IR port).  --[[User:JTD|JTD]] 23:39, 3 May 2006 (BST)\n\nI would like to extend this question to Windows computers. Working in my company I have to use Windows and Outlook on my desktop though I run Linux on all my servers. My Zaurus is a very nice piece of equipment but almost use less as I would need a PDA to synchronize Outlook with.','utf-8');
 INSERT INTO mw_text VALUES (1947,'In a few weeks or months we might remove the link to this page from the home page.  You can always get to this page by visiting http://openzaurus.berlios.de/Admin.\n\n== Monitoring Pages ==\n\nAn RSS feed reader is the best tool to use to monitor the entire site for changes.  Simply subscribe to [http://openzaurus.berlios.de/wiki/index.php?title=Special:Recentchanges&feed=rss this url].  This is most useful for site admins.\n\nIn addition, when you create an account, you can set up your preferences so that you can be sent an email whenever a page that you have previously edited is changed.  You can also manually subscribe to individual pages.  Click on \"Create an account\" in the upper right-hand corner.  This is most useful for site contributors.\n\n== Controlling Spam ==\n\nThe wiki currently allows unregistered users to edit the site.  This helps encourage people to contribute content.  When spam becomes a problem, we will be forced to make the site more restrictive.\n\nWhen spammers hit the site, their changes are very easily reverted:\n* View the page\'s history\n* Click on the date of the page you\'d like to revert to.  This opens that revision in an edit window.\n* Ignore the warning about an out of date copy and save the page.  The spam has been eradicated.\n\n== Navigation Links ==\n\nTo change the always-visible navigation links, modify [[MediaWiki:Sidebar]].  See [[Help:Sidebar]] for more.  Only admins can edit the sidebar.  See [http://meta.wikimedia.org/wiki/Help:User_rights wikimedia] for more information.\n\n== TODO ==\n\n* Add a TODO template and a skeleton template so we can keep track of the parts of the wiki that are in desperate need of attention.\n* Setup automatic backups for the database and the site repo.  (what about uploaded images?)\n* Test image upload.  This is fairly low priority but might be useful.  Screenshot galleries would be especially nice.\n\nmuch later:\n\n* Ask someone to create a custom theme.  [http://meta.wikimedia.org/wiki/MediaWiki_look_and_feel] [http://meta.wikimedia.org/wiki/Skins]  Look to [http://hula-project.org] or [http://www.mono-project.com/Main_Page] for inspiration.  Ensure that the new theme is easily read on Zaruses (even 240 pix wide?)\n\n== Done ==\n\n* 2 Jun 2006: Put software in OZ svn so others can mirror it [https://developer.berlios.de/svn/?group_id=6445]\n*  1 Jun 2006: Added Google Analytics stub to all pages.  Disabled all skins except for MonoBook because otherwise I\'d have to update each skin individually.\n* 30 May 2006: Kergoth pointed wiki.openzaurus.org to this wiki.\n* 25 May 2006: Incorproated new OZ logo, got rid of Wikipedia daisy bg image.\n* 14 Apr 2006: Added a [[OpenZaurus:About|Contact]] link to the sidebar.\n* 14 Apr 2006: Ensured that the BerliOS logo is displayed on every page.\n* 14 Apr 2006: Created the virtual host for wiki.openzaurus.org.  Now just need to update openzaurus.org dns...  kergoth?\n* 13 Apr 2006: Placed site content under version control.  Subversion repo is in ~bronson/wikirepo (can\'t use BerliOS public SVN since this repo contains passwords).  Users who are part of the BerliOS openzaurus group can access it.  svn co file://localhost/home/users/bronson/wikirepo\n* 12 Apr 2006: Add a param to ignore any cached pages older than a given date. ([[ShowTimestamp]])\n* 12 Apr 2006: Get rid of index.php in the URLs (that was painful -- $wgCacheEpoch appears to be ignored?)\n\n== Tools ==\n\n[[ShowTimestamp]]\n\n== Statistics ==\n\n[http://openzaurus.berlios.de/usage/ Site Statistics]\n\n[https://www.google.com/analytics/home/report?rid=554045 Google Analytics]\n\n[http://openzaurus.berlios.de/info.php PHPInfo]','utf-8');
+INSERT INTO mw_text VALUES (1948,'In a few weeks or months we might remove the link to this page from the home page.  You can always get to this page by visiting http://openzaurus.berlios.de/Admin.\n\n== Monitoring Pages ==\n\nAn RSS feed reader is the best tool to use to monitor the entire site for changes.  Simply subscribe to [http://openzaurus.berlios.de/wiki/index.php?title=Special:Recentchanges&feed=rss this url].  This is most useful for site admins.\n\nIn addition, when you create an account, you can set up your preferences so that you can be sent an email whenever a page that you have previously edited is changed.  You can also manually subscribe to individual pages.  Click on \"Create an account\" in the upper right-hand corner.  This is most useful for site contributors.\n\n== Controlling Spam ==\n\nThe wiki currently allows unregistered users to edit the site.  This helps encourage people to contribute content.  When spam becomes a problem, we will be forced to make the site more restrictive.\n\nWhen spammers hit the site, their changes are very easily reverted:\n* View the page\'s history\n* Click on the date of the page you\'d like to revert to.  This opens that revision in an edit window.\n* Ignore the warning about an out of date copy and save the page.  The spam has been eradicated.\n\n== Navigation Links ==\n\nTo change the always-visible navigation links, modify [[MediaWiki:Sidebar]].  See [[Help:Sidebar]] for more.  Only admins can edit the sidebar.  See [http://meta.wikimedia.org/wiki/Help:User_rights wikimedia] for more information.\n\n== TODO ==\n\n* Add a TODO template and a skeleton template so we can keep track of the parts of the wiki that are in desperate need of attention.\n* Setup automatic backups for the database and the site repo.  (what about uploaded images?)\n* Test image upload.  This is fairly low priority but might be useful.  Screenshot galleries would be especially nice.\n\nmuch later:\n\n* Ask someone to create a custom theme.  [http://meta.wikimedia.org/wiki/MediaWiki_look_and_feel] [http://meta.wikimedia.org/wiki/Skins]  Look to [http://hula-project.org] or [http://www.mono-project.com/Main_Page] for inspiration.  Ensure that the new theme is easily read on Zaruses (even 240 pix wide?)\n\n== Done ==\n\n* 3 Jun 2006: Erased all rows from the interwiki table [http://en.wikipedia.org/wiki/InterWiki] -- we\'re not associated with any of these sites.\n* 2 Jun 2006: Put software in svn so others can mirror it [https://developer.berlios.de/svn/?group_id=6445]\n*  1 Jun 2006: Added Google Analytics stub to all pages.  Disabled all skins except for MonoBook because otherwise I\'d have to update each skin individually.\n* 30 May 2006: Kergoth pointed wiki.openzaurus.org to this wiki.\n* 25 May 2006: Incorproated new OZ logo, got rid of Wikipedia daisy bg image.\n* 14 Apr 2006: Added a [[OpenZaurus:About|Contact]] link to the sidebar.\n* 14 Apr 2006: Ensured that the BerliOS logo is displayed on every page.\n* 14 Apr 2006: Created the virtual host for wiki.openzaurus.org.  Now just need to update openzaurus.org dns...  kergoth?\n* 13 Apr 2006: Placed site content under version control.  Subversion repo is in ~bronson/wikirepo (can\'t use BerliOS public SVN since this repo contains passwords).  Users who are part of the BerliOS openzaurus group can access it.  svn co file://localhost/home/users/bronson/wikirepo\n* 12 Apr 2006: Add a param to ignore any cached pages older than a given date. ([[ShowTimestamp]])\n* 12 Apr 2006: Get rid of index.php in the URLs (that was painful -- $wgCacheEpoch appears to be ignored?)\n\n== Tools ==\n\n[[ShowTimestamp]]\n\n== Statistics ==\n\n[http://openzaurus.berlios.de/usage/ Site Statistics]\n\n[https://www.google.com/analytics/home/report?rid=554045 Google Analytics]\n\n[http://openzaurus.berlios.de/info.php PHPInfo]','utf-8');
+INSERT INTO mw_text VALUES (1949,'In a few weeks or months we might remove the link to this page from the home page.  You can always get to this page by visiting http://openzaurus.berlios.de/Admin.\n\n== Monitoring Pages ==\n\nAn RSS feed reader is the best tool to use to monitor the entire site for changes.  Simply subscribe to [http://openzaurus.berlios.de/wiki/index.php?title=Special:Recentchanges&feed=rss this url].  This is most useful for site admins.\n\nIn addition, when you create an account, you can set up your preferences so that you can be sent an email whenever a page that you have previously edited is changed.  You can also manually subscribe to individual pages.  Click on \"Create an account\" in the upper right-hand corner.  This is most useful for site contributors.\n\n== Controlling Spam ==\n\nThe wiki currently allows unregistered users to edit the site.  This helps encourage people to contribute content.  When spam becomes a problem, we will be forced to make the site more restrictive.\n\nWhen spammers hit the site, their changes are very easily reverted:\n* View the page\'s history\n* Click on the date of the page you\'d like to revert to.  This opens that revision in an edit window.\n* Ignore the warning about an out of date copy and save the page.  The spam has been eradicated.\n\n== Changing the Sidebar ==\n\nTo change the always-visible navigation links, modify [[MediaWiki:Sidebar]].  See [[Help:Sidebar]] for more.  Only admins can edit the sidebar.  See [http://meta.wikimedia.org/wiki/Help:User_rights wikimedia] for more information.\n\n== Mirroring ==\n\n[[Admin/MirrorWiki]]\n\n== TODO ==\n\n* Add a TODO template and a skeleton template so we can keep track of the parts of the wiki that are in desperate need of attention.\n* Setup automatic backups for the database and the site repo.  (what about uploaded images?)\n* Test image upload.  This is fairly low priority but might be useful.  Screenshot galleries would be especially nice.\n\nmuch later:\n\n* Ask someone to create a custom theme.  [http://meta.wikimedia.org/wiki/MediaWiki_look_and_feel] [http://meta.wikimedia.org/wiki/Skins]  Look to [http://hula-project.org] or [http://www.mono-project.com/Main_Page] for inspiration.  Ensure that the new theme is easily read on Zaruses (even 240 pix wide?)\n\n== Done ==\n\n* 3 Jun 2006: Erased all rows from the interwiki table [http://en.wikipedia.org/wiki/InterWiki] -- we\'re not associated with any of these sites.\n* 2 Jun 2006: Put software in svn so others can mirror it [https://developer.berlios.de/svn/?group_id=6445]\n*  1 Jun 2006: Added Google Analytics stub to all pages.  Disabled all skins except for MonoBook because otherwise I\'d have to update each skin individually.\n* 30 May 2006: Kergoth pointed wiki.openzaurus.org to this wiki.\n* 25 May 2006: Incorproated new OZ logo, got rid of Wikipedia daisy bg image.\n* 14 Apr 2006: Added a [[OpenZaurus:About|Contact]] link to the sidebar.\n* 14 Apr 2006: Ensured that the BerliOS logo is displayed on every page.\n* 14 Apr 2006: Created the virtual host for wiki.openzaurus.org.  Now just need to update openzaurus.org dns...  kergoth?\n* 13 Apr 2006: Placed site content under version control.  Subversion repo is in ~bronson/wikirepo (can\'t use BerliOS public SVN since this repo contains passwords).  Users who are part of the BerliOS openzaurus group can access it.  svn co file://localhost/home/users/bronson/wikirepo\n* 12 Apr 2006: Add a param to ignore any cached pages older than a given date. ([[ShowTimestamp]])\n* 12 Apr 2006: Get rid of index.php in the URLs (that was painful -- $wgCacheEpoch appears to be ignored?)\n\n== Tools ==\n\n[[ShowTimestamp]]\n\n== Statistics ==\n\n[http://openzaurus.berlios.de/usage/ Site Statistics]\n\n[https://www.google.com/analytics/home/report?rid=554045 Google Analytics]\n\n[http://openzaurus.berlios.de/info.php PHPInfo]','utf-8');
 
 --
 -- Table structure for table 'mw_trackbacks'
 --
 
+DROP TABLE IF EXISTS mw_trackbacks;
 CREATE TABLE mw_trackbacks (
   tb_id int(11) NOT NULL auto_increment,
   tb_page int(11) default NULL,
@@ -6473,6 +6500,7 @@ CREATE TABLE mw_trackbacks (
 -- Table structure for table 'mw_transcache'
 --
 
+DROP TABLE IF EXISTS mw_transcache;
 CREATE TABLE mw_transcache (
   tc_url varchar(255) NOT NULL default '',
   tc_contents text,
@@ -6490,6 +6518,7 @@ CREATE TABLE mw_transcache (
 -- Table structure for table 'mw_user'
 --
 
+DROP TABLE IF EXISTS mw_user;
 CREATE TABLE mw_user (
   user_id int(5) unsigned NOT NULL auto_increment,
   user_name varchar(255) binary NOT NULL default '',
@@ -6518,6 +6547,7 @@ CREATE TABLE mw_user (
 -- Table structure for table 'mw_user_groups'
 --
 
+DROP TABLE IF EXISTS mw_user_groups;
 CREATE TABLE mw_user_groups (
   ug_user int(5) unsigned NOT NULL default '0',
   ug_group char(16) NOT NULL default '',
@@ -6535,6 +6565,7 @@ CREATE TABLE mw_user_groups (
 -- Table structure for table 'mw_user_newtalk'
 --
 
+DROP TABLE IF EXISTS mw_user_newtalk;
 CREATE TABLE mw_user_newtalk (
   user_id int(5) NOT NULL default '0',
   user_ip varchar(40) NOT NULL default '',
@@ -6552,6 +6583,7 @@ CREATE TABLE mw_user_newtalk (
 -- Table structure for table 'mw_validate'
 --
 
+DROP TABLE IF EXISTS mw_validate;
 CREATE TABLE mw_validate (
   val_user int(11) NOT NULL default '0',
   val_page int(11) unsigned NOT NULL default '0',
@@ -6573,6 +6605,7 @@ CREATE TABLE mw_validate (
 -- Table structure for table 'mw_watchlist'
 --
 
+DROP TABLE IF EXISTS mw_watchlist;
 CREATE TABLE mw_watchlist (
   wl_user int(5) unsigned NOT NULL default '0',
   wl_namespace int(11) NOT NULL default '0',

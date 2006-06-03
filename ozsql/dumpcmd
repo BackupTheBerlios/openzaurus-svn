@@ -5,5 +5,5 @@
 # The egrep gets rid of the data in the user tables (passwords, etc) and
 # some meaningless and volatile cache data.
 
-mysqldump -h db.berlios.de -u openzaurus --password=$PASSWORD openzaurus | \
+mysqldump --add-drop-table -h db.berlios.de -u openzaurus --password=$PASSWORD openzaurus | \
   egrep -v "^INSERT INTO mw_(user.*|site_stats|hitcounter|watchlist|objectcache|transcache) "
