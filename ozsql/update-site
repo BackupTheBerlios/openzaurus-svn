@@ -43,9 +43,12 @@ echo Data loaded by `date --utc`
 
 
 # Pull down any changes to the application
-cd "$WIKI"
+cd "$HTDOCS"
 svn up
 echo Application changes down by `date --utc`
+
+cd wiki
+date --utc > mirror.stamp
 
 
 # Finally, rebuild the fulltext index.

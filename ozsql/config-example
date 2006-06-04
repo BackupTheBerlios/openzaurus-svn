@@ -6,5 +6,6 @@ DB='database'
 USER='user'
 PASS='pass'
 
-WIKI='/full/path/to/htdcos/wiki'
+# Full path to the directory that contains .htaccess, info.php, and wiki.
+HTDOCS='/full/path/to/htdcos'
 
