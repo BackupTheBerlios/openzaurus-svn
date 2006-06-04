@@ -115,12 +115,17 @@ urchinTracker();
 	  <div class="pBody">
 	    <ul><?php
                if(is_file('mirror.stamp')) {
-	         $link = 'http://wiki.openzaurus.org' .
-                   htmlspecialchars($this->data['content_actions']['article']['href']);
+		 $link = '/' . $this->data['thispage'];
+		 # Unfortunately, the above doesn't work on some special
+		 # pages like whatlinkshere.  Here's the workaround:
+ 		 if($this->data['content_actions']['article']) {
+                   $link = $this->data['content_actions']['article']['href'];
+ 		 }
+	         $link = htmlspecialchars("http://wiki.openzaurus.org$link");
 	    ?>
               <span style='text-transform:none;color:gray;'>
-                Mirror of <a href='<?php echo $link ?>'><?php echo $link ?></a>,
-		last updated <?php echo file_get_contents('mirror.stamp') ?>
+                Mirror of <a href='<?php echo $link ?>'><?php echo $link ?></a>
+		&nbsp;last updated <?php echo file_get_contents('mirror.stamp') ?>
               </span>
             <?php
 	     } else {
