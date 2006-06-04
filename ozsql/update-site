@@ -29,12 +29,14 @@ if [ "x" == "x$FORCE" ]; then
 	if svn up | tail -1 | grep -q ^At; then
 		echo 'Already up to date.'
 		echo Finished at `date --utc`
+		echo done.
 		exit 0
 	fi
-	echo Database changes down by `date`
 else
 	svn up
 fi
+echo Database data pulled by `date --utc`
+echo
 
 
 # We have new data.  Load it into the databse.
@@ -46,7 +48,7 @@ echo
 # Pull down any changes to the application
 cd "$HTDOCS"
 svn up
-echo Application changes down by `date --utc`
+echo Application data pulled by `date --utc`
 echo
 
 cd wiki
