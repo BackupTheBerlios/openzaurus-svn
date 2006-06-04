@@ -113,14 +113,25 @@ urchinTracker();
 	<div class="portlet" id="p-personal">
 	  <h5><?php $this->msg('personaltools') ?></h5>
 	  <div class="pBody">
-	    <ul>
-	    <?php foreach($this->data['personal_urls'] as $key => $item) {
+	    <ul><?php
+               if(is_file('mirror.stamp')) {
+	         $link = 'http://wiki.openzaurus.org' .
+                   htmlspecialchars($this->data['content_actions']['article']['href']);
+	    ?>
+              <span style='text-transform:none;color:gray;'>
+                Mirror of <a href='<?php echo $link ?>'><?php echo $link ?></a>,
+		last updated <?php echo file_get_contents('mirror.stamp') ?>
+              </span>
+            <?php
+	     } else {
+	      foreach($this->data['personal_urls'] as $key => $item) {
 	       ?><li id="pt-<?php echo htmlspecialchars($key) ?>"><a href="<?php
 	       echo htmlspecialchars($item['href']) ?>"<?php
 	       if(!empty($item['class'])) { ?> class="<?php
 	       echo htmlspecialchars($item['class']) ?>"<?php } ?>><?php
 	       echo htmlspecialchars($item['text']) ?></a></li><?php
-	    } ?>
+	      }
+	    }?>
 	    </ul>
 	  </div>
 	</div>
