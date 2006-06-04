@@ -99,12 +99,24 @@ require("extensions/Email.php");
 # Requires users to log in to edit pages
 # $wgGroupPermissions['*']['edit'] = false;
 
+# We don't need strong passwords but we do want a little sensibility
+$wgMinimalPasswordLength = 3;
+
 
 # No need to show discussion pages for anonymous users.
 $wgShowIPinHeader = false;
 
 # Get rid of all skins except for MonoBook -- too much to support otherwise.
 $wgSkipSkins = array(simple, chick, cologneblue, myskin, standard /* called Classic */, nostalgia);
+
+# Don't load messages out of our already overloaded database.
+$wgUseDatabaseMessages = false;
+# Further reduce load by not using hit counters much.
+$wgHitcounterUpdateFreq = 64;
+
+$wgGroupPermissions['*'    ]['createaccount']   = false;
+$wgGroupPermissions['*'    ]['edit']            = false;
+$wgReadOnly = "You must edit the master site at http://wiki.openzaurus.org";
 
 require_once("SiteSettings.php");
 ?>

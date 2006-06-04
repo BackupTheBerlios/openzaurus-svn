@@ -12,4 +12,7 @@ $wgDBpassword       = "db_pass";
 
 $wgEmergencyContact = "me@example.com";
 
+$wgDBadminuser = $wgDBuser;
+$wgDBadminpassword = $wgDBpassword;
+
 ?>
