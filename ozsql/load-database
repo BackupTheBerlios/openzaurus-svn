@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# This loads the data in dump.sql into the database.
+# Make sure you set up the config file before running this script!
+
+. config
+
+mysql -h "$HOST" -u "$USER" --password="$PASS" "$DB" < dump.sql
+

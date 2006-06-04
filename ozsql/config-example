@@ -1,0 +1,10 @@
+# Copy this script to a file named 'config' and fill it in
+# before running any of the other scripts in this directory.
+
+HOST='db.example.com'
+DB='database'
+USER='user'
+PASS='pass'
+
+WIKI='/full/path/to/htdcos/wiki'
+

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Scott Bronson
+# 3 June 2006
+
+# This script generates the dumpfile
+# Make sure to create the config file before running it!
+
+. config
+
+
+# The pipeline:
+
+# 1: dump the data
+#
+# 2: The egrep gets rid of all rows in the user tables (passwords, etc) and
+#    some meaningless and volatile cache tables.
+#
+# 3: The sed rewrites the mw_page tables to set all hit counts to 0 (they
+#    cause some pretty massive churn and are meaningless on a mirror anyway).
+#    It also sets the restrictions to 'sysop' so the edit link will never
+#    show up on a mirror.  It's totally straightforward except for the 2
+#    places where we have to match a single-quoted string with escapes.
+
+
+mysqldump --add-drop-table -h "$HOST" -u "$USER" --password="$DUMPPW" "$DB" | \
+  egrep -v "^INSERT INTO mw_(user.*|site_stats|hitcounter|watchlist|recentchanges|objectcache|transcache|searchindex) " | \
+  sed -r "s/^(INSERT INTO mw_page VALUES \\([0-9]+,[0-9]+,'([^'\\]|[\\].)*',)'([^'\\]|[\\].)*',[0-9]+/\\1'sysop',0/" > dump.sql
+
