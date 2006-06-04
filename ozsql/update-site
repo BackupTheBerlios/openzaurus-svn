@@ -40,12 +40,14 @@ fi
 # We have new data.  Load it into the databse.
 ./load-database
 echo Data loaded by `date --utc`
+echo
 
 
 # Pull down any changes to the application
 cd "$HTDOCS"
 svn up
 echo Application changes down by `date --utc`
+echo
 
 cd wiki
 date --utc > mirror.stamp
@@ -54,6 +56,7 @@ date --utc > mirror.stamp
 # Finally, rebuild the fulltext index.
 php maintenance/rebuildtextindex.php
 echo Fulltext rebuilt by `date --utc`
+echo
 
 
 echo done.
