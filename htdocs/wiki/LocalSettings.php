@@ -110,7 +110,10 @@ $wgShowIPinHeader = false;
 $wgSkipSkins = array(simple, chick, cologneblue, myskin, standard /* called Classic */, nostalgia);
 
 # Don't load messages out of our already overloaded database.
-$wgUseDatabaseMessages = false;
+# Nope, we don't get to use this option because then we can't
+# have a custom sidebar!
+#$wgUseDatabaseMessages = false;
+
 # Further reduce load by not using hit counters much.
 $wgHitcounterUpdateFreq = 64;
 
