@@ -35,7 +35,7 @@ if [ "x" == "x$FORCE" ]; then
 else
 	svn up
 fi
-echo Database data pulled by `date --utc`
+echo Database pulled by `date --utc`
 echo
 
 
@@ -48,7 +48,7 @@ echo
 # Pull down any changes to the application
 cd "$HTDOCS"
 svn up
-echo Application data pulled by `date --utc`
+echo Application pulled and loaded by `date --utc`
 echo
 
 cd wiki
