@@ -6,7 +6,8 @@
 # This script generates the dumpfile
 # Make sure to create the config file before running it!
 
-. config
+cd `dirname $0`
+. ./config
 
 
 # The pipeline:
@@ -23,7 +24,16 @@
 #    places where we have to match a single-quoted string with escapes.
 
 
+echo OZWiki Dump
+echo -----------
+echo
+echo started at `date --utc`
 mysqldump --add-drop-table -h "$HOST" -u "$USER" --password="$DUMPPW" "$DB" | \
   egrep -v "^INSERT INTO mw_(user.*|site_stats|hitcounter|watchlist|recentchanges|objectcache|transcache|searchindex) " | \
   sed -r "s/^(INSERT INTO mw_page VALUES \\([0-9]+,[0-9]+,'([^'\\]|[\\].)*',)'([^'\\]|[\\].)*',[0-9]+/\\1'sysop',0/" > dump.sql
+echo dump finished by by `date --utc`
 
+svn ci -m "update dump"
+echo upload finished by `date --utc`
+
+echo done.

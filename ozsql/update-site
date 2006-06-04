@@ -11,10 +11,14 @@
 # Set FORCE=1 to force the script to run even if there are no
 # changes to the master site.     i.e. run: FORCE=1 ./update-site
 
-. config
+cd `dirname $0`
+. ./config
 
 
-echo Started at `date`
+echo OZWiki Mirror
+echo -------------
+echo
+echo Started at `date --utc`
 
 
 # First check to see if there are any new versions.
@@ -24,7 +28,7 @@ echo Started at `date`
 if [ "x" == "x$FORCE" ]; then
 	if svn up | tail -1 | grep -q ^At; then
 		echo 'Already up to date.'
-		echo Finished at `date`
+		echo Finished at `date --utc`
 		exit 0
 	fi
 	echo Database changes down by `date`
@@ -35,18 +39,18 @@ fi
 
 # We have new data.  Load it into the databse.
 ./load-database
-echo Data loaded by `date`
+echo Data loaded by `date --utc`
 
 
 # Pull down any changes to the application
 cd "$WIKI"
 svn up
-echo Application changes down by `date`
+echo Application changes down by `date --utc`
 
 
 # Finally, rebuild the fulltext index.
 php maintenance/rebuildtextindex.php
-echo Fulltext rebuilt by `date`
+echo Fulltext rebuilt by `date --utc`
 
 
 echo done.

@@ -3,7 +3,8 @@
 # This loads the data in dump.sql into the database.
 # Make sure you set up the config file before running this script!
 
-. config
+cd `dirname $0`
+. ./config
 
 mysql -h "$HOST" -u "$USER" --password="$PASS" "$DB" < dump.sql
 
