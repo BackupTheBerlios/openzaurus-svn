@@ -86,7 +86,7 @@ $wgRightsUrl = "http://creativecommons.org/licenses/by-nc-sa/2.5/";
 $wgRightsText = "Attribution-NonCommercial-ShareAlike 2.5";
 $wgRightsIcon = "http://creativecommons.org/images/public/somerights20.png";
 
-$wgDiff3 = "";
+$wgDiff3 = "/usr/bin/diff3";
 
 # $wgCacheEpoch = '20060413190000';
 require("extensions/TimestampNow.php");
