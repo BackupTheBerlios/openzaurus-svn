@@ -26,7 +26,9 @@ echo Started at `date --utc`
 # Else, if no changes, it responds "At rev ##".
 
 if [ "x" == "x$FORCE" ]; then
-	if svn up | tail -1 | grep -q ^At; then
+	result=`svn up`
+	echo "$result"
+	if echo "$result" | tail -1 | grep -q ^At; then
 		echo 'Already up to date.'
 		echo Finished at `date --utc`
 		echo done.
