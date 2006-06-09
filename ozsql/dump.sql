@@ -1651,7 +1651,7 @@ INSERT INTO mw_page VALUES (1366,0,'HowTos/Root_Filesystem_on_external_media','s
 INSERT INTO mw_page VALUES (1367,0,'HowTos/Root_on_SD','sysop',0,1,1,0.978610919847,'20060429230807',1646,54);
 INSERT INTO mw_page VALUES (1368,0,'ReleaseNotes/Oz3541','sysop',0,0,0,0.053371009866,'20060606084959',1997,4085);
 INSERT INTO mw_page VALUES (1369,2,'Caligari','sysop',0,0,0,0.676164355778,'20060503041824',1675,897);
-INSERT INTO mw_page VALUES (1370,2,'JTD','sysop',0,0,0,0.472648943498,'20060515051851',1747,286);
+INSERT INTO mw_page VALUES (1370,2,'JTD','sysop',0,0,0,0.472648943498,'20060608085308',2007,622);
 INSERT INTO mw_page VALUES (1371,2,'Mickeyl','sysop',0,0,0,0.725922244941,'20060502130456',1671,362);
 INSERT INTO mw_page VALUES (1372,0,'Opie_vs._GPE','sysop',0,0,1,0.352781067466,'20060503215946',1687,373);
 INSERT INTO mw_page VALUES (1373,3,'Bronson','sysop',0,0,0,0.287309103855,'20060504170958',1698,758);
@@ -1684,7 +1684,7 @@ INSERT INTO mw_page VALUES (1399,1,'Poodle/Install','sysop',0,0,1,0.211021642976
 INSERT INTO mw_page VALUES (1400,1,'Main_Page','sysop',0,0,0,0.390841964209,'20060529144920',1895,1492);
 INSERT INTO mw_page VALUES (1401,2,'Oliver','sysop',0,0,0,0.578833565532,'20060601151731',1918,447);
 INSERT INTO mw_page VALUES (1402,3,'Oliver','sysop',0,0,0,0.700046215844,'20060531095753',1907,7303);
-INSERT INTO mw_page VALUES (1403,0,'OpenEmbedded','sysop',0,0,1,0.997103515683,'20060530220136',1901,111);
+INSERT INTO mw_page VALUES (1403,0,'OpenEmbedded','sysop',0,0,0,0.997103515683,'20060608071016',2006,253);
 INSERT INTO mw_page VALUES (1404,0,'HowTos/SanDisk_ConnectPlus_wi-fi_with_collie','sysop',0,0,1,0.485540678247,'20060602051759',1926,1668);
 INSERT INTO mw_page VALUES (1405,0,'Admin/MirrorHowto','sysop',0,0,0,0.691007952554,'20060604204843',1979,5252);
 INSERT INTO mw_page VALUES (1406,0,'Wiki_Mirrors','sysop',0,0,0,0.640802203971,'20060605152947',1989,675);
@@ -4074,6 +4074,8 @@ INSERT INTO mw_revision VALUES (2002,1409,2000,'',2,'MarcinHrwJuszkiewicz','2006
 INSERT INTO mw_revision VALUES (2003,1410,2001,'',2,'MarcinHrwJuszkiewicz','20060607082118',0,0);
 INSERT INTO mw_revision VALUES (2004,1410,2002,'',5,'Bronson','20060607134136',0,0);
 INSERT INTO mw_revision VALUES (2005,1344,2003,'Fairly extensive copyedit, much more readable now :D',0,'4.241.220.91','20060607185241',0,0);
+INSERT INTO mw_revision VALUES (2006,1403,2004,'added link to wiki',4,'OlivierBerger','20060608071016',0,0);
+INSERT INTO mw_revision VALUES (2007,1370,2005,'',16,'JTD','20060608085308',0,0);
 
 --
 -- Table structure for table 'mw_searchindex'
@@ -6137,6 +6139,8 @@ INSERT INTO mw_text VALUES (2000,'There are two ways your feeds configuration fi
 INSERT INTO mw_text VALUES (2001,'Why isn\'t there anything in here anymore?  o_O\n\nI made some readability changes and changed the questions and answers into proper English.  Speaking of which, has there been any effort to translate bits of the FAQ into other languages?  I know we have plenty of Germans working on the team...  --[[User:JTD|JTD]] 09:55, 7 June 2006 (BST)\n\nIf you have something to add/change in FAQ then do it directly.\n\nIf someone want to translate FAQ then go ahead: FAQ/DE, FAQ/FR, FAQ/RU etc + link in top of FAQ.','utf-8');
 INSERT INTO mw_text VALUES (2002,'Why isn\'t there anything in here anymore?  o_O\n\nI made some readability changes and changed the questions and answers into proper English.  Speaking of which, has there been any effort to translate bits of the FAQ into other languages?  I know we have plenty of Germans working on the team...  --[[User:JTD|JTD]] 09:55, 7 June 2006 (BST)\n\n: If you have something to add/change in FAQ then do it directly.\n\n: If someone want to translate FAQ then go ahead: FAQ/DE, FAQ/FR, FAQ/RU etc + link in top of FAQ. -- Anonymous\n\n: If you made the changes on Saturday...  that was my fault.  I managed to make the Wiki mirror in reverse once, erasing about 3 hours from its history (moral: always be sure what host you\'re on before typing a potentially destructive command -- all ssh windows look the same).  If so, sorry about that and it won\'t happen again.  If not, then I can\'t explain why edits would disappear and I will look into it more deeply.  -- [[User:Bronson|Bronson]] 15:41, 7 June 2006 (BST)','utf-8');
 INSERT INTO mw_text VALUES (2003,'=Status=\n\nKernel 2.4 on Zaurus is a nightmare to support. Very few developers are willing to work on it. It\'s quality is so low that it is nicknamed \"2.4-crapix\" by most developers.\n\nIt requires gcc 2.95 which is not available in [[OpenEmbedded]] (a separate 2.95 toolchain is used to compile the kernel for devices that cannnot run kernel 2.6).\n\n=Patches=\n\nWe use 2.4.18 with an amount of misc patches:\n\n* many fixes\n* Wireless Extensions up to v18 - needed for WPA\n* latest available Bluetooth patches\n* detailed battery status\n* OpenSwan\n* some IrDa fixes\n* some backports\n\n=Models=\nCurrently only a few Zauruses supported by OpenZaurus use the 2.4 kernel:\n\n* [[Collie]]\n* [[Poodle]]\n* [[Tosa]]\n\n=Why still 2.4?=\n\nThere are a number of reasons why we still use 2.4 kernel. Most important are:\n\n* lack of kernel hackers which will work on getting 2.6 working\n* The Locomo chip in [[Collie]], abused by Sharp to poorly handle SD, is totally undocumented.','utf-8');
+INSERT INTO mw_text VALUES (2004,'OpenEmbedded is a build system used to build OpenZaurus 3.5.x releases. It is not specific to OpenZaurus, though, and also used to produced other distributions.\n\n[http://www.openembedded.org/ Website] and [http://www.openembedded.org/wiki/MainPage Wiki]','utf-8');
+INSERT INTO mw_text VALUES (2005,'Hi!\n\nI run OZ 3.5.4 on a Collie, with root migrated to a 1GB SD card.  I finally have it working correctly.  If you need help PM me.\n\nI also have OZ 3.5.4.1-rc4 on an Akita.  Looking a lot better than it used to!  It runs GPE and does it quite well.\n\nI wanna give you guys a great resource for some GORGEOUS space-themed wallpaper which looks GREAT in GPE.  It\'s bordered and proportioned so that when you set GPE to \"stretch\" it lines up perfectly with icons and such.\n\nhttp://www.spacespider.net/desktop-wallpaper-greg-martin.php\n\nAwesome, awesome stuff.  Consider buying Greg\'s prints at http://www.artofgregmartin.com/','utf-8');
 
 --
 -- Table structure for table 'mw_trackbacks'
