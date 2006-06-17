@@ -121,5 +121,9 @@ $wgGroupPermissions['*'    ]['createaccount']   = false;
 $wgGroupPermissions['*'    ]['edit']            = false;
 $wgReadOnly = "You must edit the master site at http://wiki.openzaurus.org";
 
+# Allows [[sandbox]] and then visit that page and make [[/test]]
+# which will automatically make [[sandbox/test]]
+$wgNamespacesWithSubpages[0] = true;
+
 require_once("SiteSettings.php");
 ?>
