@@ -40,7 +40,15 @@ echo
 # I remove the dump.sql file between invocations because it's just going to
 # to be replaced anyway.  No need to have it clogging up my quota.
 svn ci -m "update dump.sql" && rm dump.sql
-echo upload finished by `date --utc`
 
 echo
+echo Adding new images at `date --utc`
+svn add --force /home/groups/openzaurus/htdocs/wiki/images
+
+echo
+echo Checking in new images at `date --utc`
+svn ci -m 'add new images' /home/groups/openzaurus/htdocs/wiki/images
+
+echo
+echo Finished by `date --utc`
 echo done.
