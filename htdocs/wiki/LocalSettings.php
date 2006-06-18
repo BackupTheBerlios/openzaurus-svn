@@ -65,7 +65,7 @@ $wgUseImageResize  = true;
 ## create the directories images/archive, images/thumb and
 ## images/temp, and make them all writable. Then uncomment
 ## this, if it's not already uncommented:
-$wgHashedUploadDirectory = false;
+$wgHashedUploadDirectory = true;
 
 ## If you have the appropriate support software installed
 ## you can enable inline LaTeX equations:
