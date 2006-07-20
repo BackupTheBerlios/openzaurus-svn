@@ -91,7 +91,6 @@ $wgDiff3 = "/usr/bin/diff3";
 # $wgCacheEpoch = '20060413190000';
 require("extensions/TimestampNow.php");
 require("extensions/Email.php");
-require("extensions/Bad-Behavior/bad-behavior-mediawiki.php");
 
 
 # --- spam protection ---
