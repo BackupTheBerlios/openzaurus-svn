@@ -52,7 +52,6 @@ CREATE TABLE mw_bad_behavior (
   http_headers text NOT NULL,
   user_agent text NOT NULL,
   request_entity text NOT NULL,
-  key text NOT NULL,
   PRIMARY KEY  (id),
   KEY ip (ip(15)),
   KEY user_agent (user_agent(10))

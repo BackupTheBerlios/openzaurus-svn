@@ -17,6 +17,10 @@ cd `dirname $0`
 # 2: The egrep gets rid of all rows in the user tables (passwords, etc) and
 #    some meaningless and volatile cache tables.
 #
+# 2.5: BadBehavior erroneously uses a keyword in its schema.  We need to
+#    trim it out.  Because there's no need for badbehavior on mirrors,
+#    we'll just turn it off so the nonmatching schema doesn't matter.
+#
 # 3: The sed rewrites the mw_page tables to set all hit counts to 0 (they
 #    cause some pretty massive churn and are meaningless on a mirror anyway).
 #    It also sets the restrictions to 'sysop' so the edit link will never
@@ -30,6 +34,7 @@ echo
 echo started at `date --utc`
 mysqldump --add-drop-table -h "$HOST" -u "$USER" --password="$DUMPPW" "$DB" | \
   egrep -v "^INSERT INTO mw_(user.*|site_stats|hitcounter|watchlist|recentchanges|objectcache|transcache|searchindex|bad_behavior) " | \
+  egrep -v "^  key text NOT NULL," | \
   sed -r "s/^(INSERT INTO mw_page VALUES \\([0-9]+,[0-9]+,'([^'\\]|[\\].)*',)'([^'\\]|[\\].)*',[0-9]+/\\1'sysop',0/" > dump.sql
 echo dump finished by by `date --utc`
 echo
