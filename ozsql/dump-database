@@ -37,8 +37,6 @@ ls -lh dump.sql
 echo Size of diff: `svn diff dump.sql | wc`
 echo
 
-exit 0
-
 # I remove the dump.sql file between invocations because it's just going to
 # to be replaced anyway.  No need to have it clogging up my quota.
 svn ci -m "update dump.sql" && rm dump.sql
