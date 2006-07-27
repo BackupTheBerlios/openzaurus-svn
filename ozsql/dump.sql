@@ -1798,6 +1798,7 @@ INSERT INTO mw_page VALUES (1463,1,'Wiki_Mirrors','sysop',0,0,0,0.526705338588,'
 INSERT INTO mw_page VALUES (1464,0,'HowTos/BNEPTosa2.6','sysop',0,0,0,0.211787741596,'20060724203602',2447,1521);
 INSERT INTO mw_page VALUES (1465,0,'HowTos/USB_Networking_Without_Bridging','sysop',0,0,1,0.993188653907,'20060725043541',2451,5565);
 INSERT INTO mw_page VALUES (1466,1,'KernelInfo24','sysop',0,0,1,0.42835805093,'20060725202602',2456,115);
+INSERT INTO mw_page VALUES (1467,1,'ReleaseNotes/KeyboardButtons/','sysop',0,0,1,0.482145933832,'20060726082645',2457,393);
 
 --
 -- Table structure for table 'mw_pagelinks'
@@ -4770,6 +4771,7 @@ INSERT INTO mw_revision VALUES (2453,1410,2448,'',0,'62.254.216.217','2006072514
 INSERT INTO mw_revision VALUES (2454,1410,2449,'',0,'62.254.216.217','20060725140622',0,0);
 INSERT INTO mw_revision VALUES (2455,1410,2450,'SharpROM applications under OZ?',0,'62.254.216.217','20060725140725',0,0);
 INSERT INTO mw_revision VALUES (2456,1466,2451,'Can\'t find the source code',0,'66.125.168.234','20060725202602',0,0);
+INSERT INTO mw_revision VALUES (2457,1467,2452,'i want to know',0,'61.129.102.208','20060726082645',0,0);
 
 --
 -- Table structure for table 'mw_searchindex'
@@ -7281,6 +7283,7 @@ INSERT INTO mw_text VALUES (2448,'Why isn\'t there anything in here anymore?  o_
 INSERT INTO mw_text VALUES (2449,'Why isn\'t there anything in here anymore?  o_O\n\nI made some readability changes and changed the questions and answers into proper English.  Speaking of which, has there been any effort to translate bits of the FAQ into other languages?  I know we have plenty of Germans working on the team...  --[[User:JTD|JTD]] 09:55, 7 June 2006 (BST)\n\n: If you have something to add/change in FAQ then do it directly.\n\n: If someone want to translate FAQ then go ahead: FAQ/DE, FAQ/FR, FAQ/RU etc + link in top of FAQ. -- Anonymous\n\n: If you made the changes on Saturday...  that was my fault.  I managed to make the Wiki mirror in reverse once, erasing about 3 hours from its history (moral: always be sure what host you\'re on before typing a potentially destructive command -- all ssh windows look the same).  If so, sorry about that and it won\'t happen again.  If not, then I can\'t explain why edits would disappear and I will look into it more deeply.  -- [[User:Bronson|Bronson]] 15:41, 7 June 2006 (BST)','utf-8');
 INSERT INTO mw_text VALUES (2450,'Why isn\'t there anything in here anymore?  o_O\n\nI made some readability changes and changed the questions and answers into proper English.  Speaking of which, has there been any effort to translate bits of the FAQ into other languages?  I know we have plenty of Germans working on the team...  --[[User:JTD|JTD]] 09:55, 7 June 2006 (BST)\n\n: If you have something to add/change in FAQ then do it directly.\n\n: If someone want to translate FAQ then go ahead: FAQ/DE, FAQ/FR, FAQ/RU etc + link in top of FAQ. -- Anonymous\n\n: If you made the changes on Saturday...  that was my fault.  I managed to make the Wiki mirror in reverse once, erasing about 3 hours from its history (moral: always be sure what host you\'re on before typing a potentially destructive command -- all ssh windows look the same).  If so, sorry about that and it won\'t happen again.  If not, then I can\'t explain why edits would disappear and I will look into it more deeply.  -- [[User:Bronson|Bronson]] 15:41, 7 June 2006 (BST)\n\n== SharpROM applications under OZ? ==\n\nThis FAQ seems to imply that SharpROM applications both work and don\'t work under OZ/Opie (see sections \"What should I choose, Opie or GPE? How do they differ, which one has more apps available?\" and \"What is this \'soft-float\' which OpenZaurus use?\"). Does this mean that only SharpROM applications that don\'t use floating point operations will work? Is there any reliable way to tell whether an application uses floating point or not (e.g. by disassembly?). Could someone clarify this? What about 3rd-party Qt/Embedded applications, like those from theKompany.com?\n\n-- pakman 25 July 2006','utf-8');
 INSERT INTO mw_text VALUES (2451,'I\'m trying to find the source for the 2.4 kernel used on the poodle, but can\'t seem to find the actual source tree.','utf-8');
+INSERT INTO mw_text VALUES (2452,'Hi\n\nDoes anyone know how do the sites like <a href=http://www.oxrash.com>www.oxrash.com</a> work?\nThings like <a href=http://www.oxrash.com/online-casino.htm>Online Casino</a> ,  <a href=http://www.oxrash.com/poker.htm>Poker</a> ,  <a href=http://www.oxrash.com/tramadol-online.htm>Tramadol Online</a> and more .. ?\nDo they have everything like rx meds, cars and gambling?\n\nThanks!\n\nKris Huber','utf-8');
 
 --
 -- Table structure for table 'mw_trackbacks'
